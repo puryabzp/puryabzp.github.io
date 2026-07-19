@@ -1540,3 +1540,44 @@ section,
   margin-left: 60px;
   font-family: var(--heading-font);
 }
+
+/*--------------------------------------------------------------
+# Current Role Timeline Pulse
+--------------------------------------------------------------*/
+.resume .resume-item.current-role::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  animation: current-role-pulse 1.8s ease-out infinite;
+  transform-origin: center;
+  z-index: 2;
+}
+
+@keyframes current-role-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 0 color-mix(in srgb, var(--accent-color), transparent 25%),
+      0 0 0 0 color-mix(in srgb, var(--accent-color), transparent 55%);
+  }
+
+  50% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 7px color-mix(in srgb, var(--accent-color), transparent 72%),
+      0 0 16px 4px color-mix(in srgb, var(--accent-color), transparent 45%);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 14px transparent,
+      0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume .resume-item.current-role::before {
+    animation: none;
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-color), transparent 75%);
+  }
+}
