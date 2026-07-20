@@ -1,25 +1,67 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
   /**
-   * Header toggle
+   * Reliable mobile drawer navigation
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
-
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+  const header = document.querySelector('#header');
+  let mobileNavBackdrop = document.querySelector('.mobile-nav-backdrop');
+  if (!mobileNavBackdrop) {
+    mobileNavBackdrop = document.createElement('div');
+    mobileNavBackdrop.className = 'mobile-nav-backdrop';
+    mobileNavBackdrop.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(mobileNavBackdrop, document.body.firstChild);
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+
+  function setMobileNav(open) {
+    const shouldOpen = Boolean(open) && window.innerWidth < 1200;
+    header.classList.toggle('header-show', shouldOpen);
+    document.body.classList.toggle('mobile-nav-open', shouldOpen);
+    headerToggleBtn.classList.toggle('bi-list', !shouldOpen);
+    headerToggleBtn.classList.toggle('bi-x', shouldOpen);
+    headerToggleBtn.setAttribute('aria-expanded', String(shouldOpen));
+    headerToggleBtn.setAttribute('aria-label', shouldOpen ? 'Close navigation' : 'Open navigation');
+  }
+  window.closeMobileNav = () => setMobileNav(false);
+
+  headerToggleBtn.setAttribute('role', 'button');
+  headerToggleBtn.setAttribute('tabindex', '0');
+  headerToggleBtn.setAttribute('aria-controls', 'header');
+  headerToggleBtn.setAttribute('aria-expanded', 'false');
+  headerToggleBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setMobileNav(!document.body.classList.contains('mobile-nav-open'));
+  });
+  headerToggleBtn.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setMobileNav(!document.body.classList.contains('mobile-nav-open'));
+    }
+  });
+
+  mobileNavBackdrop.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    setMobileNav(false);
+  });
+  mobileNavBackdrop.addEventListener('click', () => setMobileNav(false));
+
+  // Capture phase makes outside-click closing independent of RTL, overlays,
+  // AOS, Bootstrap, and child handlers.
+  document.addEventListener('pointerdown', (event) => {
+    if (window.innerWidth >= 1200 || !document.body.classList.contains('mobile-nav-open')) return;
+    const path = event.composedPath ? event.composedPath() : [];
+    if (!path.includes(header) && !path.includes(headerToggleBtn)) setMobileNav(false);
+  }, true);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMobileNav(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1200) setMobileNav(false);
+  });
+  window.addEventListener('portfolio:language', () => setMobileNav(false));
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -90,20 +132,47 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
+   * Init/rebuild typed.js. The instance must be recreated whenever
+   * the site language changes, otherwise Typed.js keeps its old strings.
    */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
+  let typedInstance = null;
+
+  function initTyped(items = null) {
+    if (!selectTyped || typeof Typed === 'undefined') return;
+
+    const strings = Array.isArray(items)
+      ? items
+      : (selectTyped.getAttribute('data-typed-items') || '')
+          .split(',')
+          .map(item => item.trim())
+          .filter(Boolean);
+
+    if (!strings.length) return;
+
+    if (typedInstance) {
+      typedInstance.destroy();
+      typedInstance = null;
+    }
+
+    // Typed.js may leave generated text/cursor behind after destroy().
+    selectTyped.textContent = '';
+    document.querySelectorAll('.typed-cursor').forEach(cursor => cursor.remove());
+
+    typedInstance = new Typed(selectTyped, {
+      strings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000
     });
   }
+
+  initTyped();
+
+  window.addEventListener('portfolio:language', (event) => {
+    initTyped(event.detail?.typedItems || null);
+  });
 
   /**
    * Initiate Pure Counter
@@ -168,23 +237,81 @@
   });
 
   /**
-   * Init swiper sliders
+   * Init/rebuild Swiper sliders.
+   * Rebuilding is required when the document changes between RTL and LTR;
+   * updating an existing looped Swiper can leave its translated track off-screen.
    */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+  const swiperInstances = new Map();
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+  function readSwiperConfig(swiperElement) {
+    const configElement = swiperElement.querySelector('.swiper-config');
+    if (!configElement) return null;
+
+    try {
+      return JSON.parse(configElement.textContent.trim());
+    } catch (error) {
+      console.error('Invalid Swiper configuration:', error);
+      return null;
+    }
+  }
+
+  function createSwiper(swiperElement) {
+    const config = readSwiperConfig(swiperElement);
+    if (!config || typeof Swiper === 'undefined') return null;
+
+    // Keep pagination scoped to this slider rather than the whole document.
+    if (config.pagination) {
+      config.pagination = {
+        ...config.pagination,
+        el: swiperElement.querySelector('.swiper-pagination')
+      };
+    }
+
+    const instance = new Swiper(swiperElement, config);
+    swiperInstances.set(swiperElement, instance);
+    return instance;
+  }
+
+  function destroySwiper(swiperElement) {
+    const instance = swiperInstances.get(swiperElement) || swiperElement.swiper;
+    if (instance && !instance.destroyed) {
+      instance.destroy(true, true);
+    }
+
+    swiperInstances.delete(swiperElement);
+
+    // Remove stale inline geometry left by Swiper/loop clones.
+    swiperElement.removeAttribute('dir');
+    swiperElement.style.removeProperty('overflow');
+    const wrapper = swiperElement.querySelector('.swiper-wrapper');
+    if (wrapper) wrapper.removeAttribute('style');
+
+    swiperElement.querySelectorAll('.swiper-slide').forEach((slide) => {
+      slide.removeAttribute('style');
+    });
+  }
+
+  function initSwiper() {
+    document.querySelectorAll('.init-swiper').forEach((swiperElement) => {
+      if (!swiperInstances.has(swiperElement) && !swiperElement.swiper) {
+        createSwiper(swiperElement);
       }
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  function rebuildSwipers() {
+    document.querySelectorAll('.init-swiper').forEach(destroySwiper);
+
+    // Wait until html[dir] and translated content have completed layout.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.init-swiper').forEach(createSwiper);
+      });
+    });
+  }
+
+  window.addEventListener('load', initSwiper);
+  window.addEventListener('portfolio:language', rebuildSwipers);
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
