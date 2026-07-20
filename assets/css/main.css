@@ -2181,3 +2181,39 @@ html[dir="rtl"] .stats .stats-item .stats-top {
     max-width: 250px;
   }
 }
+@media (max-width: 767px) {
+  #header .profile-img {
+    display: none !important;
+  }
+
+  #header .logo {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header .profile-img {
+    display: block !important;
+    width: 96px !important;
+    height: 96px !important;
+    min-width: 96px;
+    min-height: 96px;
+    aspect-ratio: 1 / 1;
+    margin: 14px auto 10px;
+    padding: 0;
+    overflow: hidden;
+    flex: 0 0 96px;
+    border-radius: 50% !important;
+  }
+
+  #header .profile-img img {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 50% 28%;
+    border-radius: 50% !important;
+  }
+}
