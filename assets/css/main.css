@@ -2217,3 +2217,78 @@ html[dir="rtl"] .stats .stats-item .stats-top {
     border-radius: 50% !important;
   }
 }
+
+/* ==============================================================
+   FINAL PROFILE IMAGE FIX
+   Desktop: 120x120 circle
+   Tablet: 96x96 circle
+   Mobile: hidden
+   Prevents flexbox from compressing the image into an oval.
+   ============================================================== */
+
+#header .profile-img {
+  display: block;
+  width: 120px !important;
+  height: 120px !important;
+  min-width: 120px !important;
+  min-height: 120px !important;
+  max-width: 120px !important;
+  max-height: 120px !important;
+  flex: 0 0 120px !important;
+  aspect-ratio: 1 / 1;
+  margin: 15px auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 4px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 50% !important;
+  background: transparent;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+#header .profile-img img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: 50% 32% !important;
+  transform: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header .profile-img {
+    display: block !important;
+    width: 96px !important;
+    height: 96px !important;
+    min-width: 96px !important;
+    min-height: 96px !important;
+    max-width: 96px !important;
+    max-height: 96px !important;
+    flex: 0 0 96px !important;
+    aspect-ratio: 1 / 1;
+    margin: 14px auto 10px !important;
+  }
+
+  #header .profile-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-position: 50% 30% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #header .profile-img {
+    display: none !important;
+  }
+
+  #header .logo {
+    margin-top: 24px;
+  }
+}
