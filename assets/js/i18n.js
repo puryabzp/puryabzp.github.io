@@ -1,284 +1,812 @@
 (() => {
   'use strict';
+
   const translations = {
     ar: {
-      'Home':'الرئيسية','About':'نبذة عني','Skills':'المهارات','Resume':'السيرة الذاتية','Highlights':'الإنجازات','Expertise':'الخبرات','Freelance & Marketing':'العمل الحر والتسويق','Recommendations':'التوصيات','Contact':'تواصل معي',
-      "I'm a":'أنا','Senior Software Engineer':'مهندس برمجيات أول','Download Resume':'تحميل السيرة الذاتية',
-      'Data-driven software engineer with deep expertise in scalable microservices, distributed system design, backend architecture, and high-throughput data platforms.':'مهندس برمجيات يعتمد على البيانات، بخبرة عميقة في الخدمات المصغّرة القابلة للتوسع، وتصميم الأنظمة الموزعة، وهندسة الأنظمة الخلفية، ومنصات البيانات عالية الإنتاجية.',
-      'Senior Software Engineer & Data Systems Specialist':'مهندس برمجيات أول ومتخصص في أنظمة البيانات',
-      'I design reliable APIs, event-driven services, backend architecture, ETL pipelines, and real-time data systems with a strong focus on performance, maintainability, and data quality.':'أصمم واجهات API موثوقة، وخدمات قائمة على الأحداث، وبنى خلفية، ومسارات ETL، وأنظمة بيانات لحظية مع تركيز قوي على الأداء وسهولة الصيانة وجودة البيانات.',
-      'Location:':'الموقع:','Phone:':'الهاتف:','Degree:':'الشهادة:','Email:':'البريد الإلكتروني:','Experience:':'الخبرة:','Tehran, Iran':'طهران، إيران','B.S. in ICT':'بكالوريوس في تقنية المعلومات والاتصالات','8+ years':'أكثر من 8 سنوات',
-      'My work spans financial technologies, data engineering, security platforms, and intelligent systems. I enjoy translating complex business and data requirements into clean, scalable software and collaborating with teams to raise engineering standards. Alongside software engineering, I have also worked independently in digital marketing and media, combining technology, content, audience insight, and commercial thinking to help brands strengthen their online presence.':'يشمل عملي التقنيات المالية وهندسة البيانات ومنصات الأمن والأنظمة الذكية. أستمتع بتحويل متطلبات الأعمال والبيانات المعقدة إلى برمجيات نظيفة وقابلة للتوسع، والتعاون مع الفرق لرفع المعايير الهندسية. وإلى جانب هندسة البرمجيات، عملت بشكل مستقل في التسويق الرقمي والإعلام، جامعاً بين التقنية والمحتوى وفهم الجمهور والتفكير التجاري لمساعدة العلامات التجارية على تعزيز حضورها الرقمي.',
-      '10+ Production Projects':'أكثر من 10 مشاريع إنتاجية','successfully delivered and running in production':'تم تسليمها بنجاح وتعمل في بيئة الإنتاج','1M+ Users Supported':'دعم أكثر من مليون مستخدم','using live services and platforms I contributed to':'عبر خدمات ومنصات حية ساهمت في بنائها','20+ Engineers Mentored':'إرشاد أكثر من 20 مهندساً','across backend, data, infrastructure, and related fields':'في مجالات الأنظمة الخلفية والبيانات والبنية التحتية','15+ Critical Scale Challenges':'أكثر من 15 تحدياً حرجاً في التوسع','resolved through production and disaster-recovery consulting':'تم حلها عبر استشارات الإنتاج والتعافي من الكوارث','15+ Cross-functional Teams':'أكثر من 15 فريقاً متعدد التخصصات','collaborated across business, data, product, and technology':'تعاون بين الأعمال والبيانات والمنتج والتقنية','Major Financial Portfolio Platform':'منصة مالية كبرى لإدارة المحافظ','implemented for one of Iran\'s three largest financial groups':'تم تنفيذها لإحدى أكبر ثلاث مجموعات مالية في إيران',
-      'Core technologies and engineering practices used across backend, data, cloud, and distributed systems projects.':'التقنيات والممارسات الهندسية الأساسية المستخدمة في مشاريع الأنظمة الخلفية والبيانات والسحابة والأنظمة الموزعة.','Backend Engineering':'هندسة الأنظمة الخلفية','Data Engineering':'هندسة البيانات','Databases & Search':'قواعد البيانات والبحث','Messaging & Distributed Systems':'المراسلة والأنظمة الموزعة','Cloud & DevOps':'السحابة وعمليات DevOps','Quality & Observability':'الجودة وقابلية المراقبة',
-      'Professional experience building scalable software, data, and distributed systems across finance, cybersecurity, industrial technologies and enterprise platforms.':'خبرة مهنية في بناء برمجيات وأنظمة بيانات وأنظمة موزعة قابلة للتوسع في قطاعات المال والأمن السيبراني والتقنيات الصناعية ومنصات المؤسسات.','Summary':'الملخص','Education':'التعليم','Professional Experience':'الخبرة المهنية','Present':'حتى الآن','Back-end Developer':'مطوّر أنظمة خلفية','Software Developer':'مطوّر برمجيات',
-      'Key Achievements':'أبرز الإنجازات','Selected engineering contributions across finance, cybersecurity, enterprise software, industrial systems, and large-scale distributed platforms.':'مساهمات هندسية مختارة في التمويل والأمن السيبراني وبرمجيات المؤسسات والأنظمة الصناعية والمنصات الموزعة واسعة النطاق.','Scalable Distributed Systems':'أنظمة موزعة قابلة للتوسع','Performance Engineering':'هندسة الأداء','Production Reliability':'موثوقية بيئة الإنتاج','Enterprise Financial Platforms':'المنصات المالية المؤسسية','Technical Leadership':'القيادة التقنية','Business Impact':'الأثر التجاري',
-      'Areas of Expertise':'مجالات الخبرة','Engineering capabilities for teams building dependable, scalable, and data-intensive products.':'قدرات هندسية للفرق التي تبني منتجات موثوقة وقابلة للتوسع وكثيفة البيانات.','Backend Architecture':'هندسة الأنظمة الخلفية','Distributed Systems':'الأنظمة الموزعة','Performance & Reliability':'الأداء والموثوقية','Engineering Collaboration':'التعاون الهندسي',
-      'Freelance Digital Marketing & Media':'التسويق الرقمي والإعلام الحر','Meta Advertising':'إعلانات ميتا','Social Media Strategy':'استراتيجية التواصل الاجتماعي','Performance Marketing':'تسويق الأداء','Content & Media Production':'إنتاج المحتوى والإعلام','Brand & Content Consulting':'استشارات العلامة التجارية والمحتوى','Technology-Driven Growth':'نمو مدفوع بالتقنية','Freelance Capabilities':'قدرات العمل الحر','Professional Interests':'الاهتمامات المهنية','Freelance Digital Marketing & Media Consultant':'مستشار مستقل للتسويق الرقمي والإعلام','Freelance':'عمل حر','Self-employed · Remote':'عمل مستقل · عن بُعد',
-      'Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.':'آراء قادة الهندسة والمديرين والمرشدين والزملاء الذين عملوا معي مباشرة.','View Recommendations on LinkedIn':'عرض التوصيات على LinkedIn','Open to senior backend, Python, data engineering, and distributed-systems opportunities.':'متاح لفرص متقدمة في الأنظمة الخلفية وPython وهندسة البيانات والأنظمة الموزعة.','Location':'الموقع','Phone':'الهاتف','Email':'البريد الإلكتروني','All Rights Reserved':'جميع الحقوق محفوظة','Copyright':'حقوق النشر'
+      // Navigation
+      'Home': 'الرئيسية',
+      'About': 'نبذة عني',
+      'Skills': 'المهارات',
+      'Resume': 'السيرة الذاتية',
+      'Highlights': 'الإنجازات',
+      'Expertise': 'الخبرات',
+      'Recommendations': 'التوصيات',
+      'Contact': 'تواصل معي',
+
+      // Hero
+      "I'm a": 'أنا',
+      'Senior Software Engineer': 'مهندس برمجيات أول',
+      'Download Resume': 'تحميل السيرة الذاتية',
+
+      // About
+      'I build backend and data systems that stay fast, observable, and dependable as traffic, data volume, and operational complexity grow.':
+        'أبني أنظمة خلفية ومنصات بيانات تحافظ على السرعة وقابلية المراقبة والاعتمادية مع نمو حركة الاستخدام وحجم البيانات والتعقيد التشغيلي.',
+
+      'Backend, Data & Distributed Systems':
+        'الأنظمة الخلفية والبيانات والأنظمة الموزعة',
+
+      '8+ years turning complex production requirements into Python services, real-time pipelines, and scalable platforms.':
+        'أكثر من 8 سنوات في تحويل متطلبات الإنتاج المعقدة إلى خدمات Python ومسارات بيانات لحظية ومنصات قابلة للتوسع.',
+
+      'Location:': 'الموقع:',
+      'Phone:': 'الهاتف:',
+      'GitHub:': 'GitHub:',
+      'Degree:': 'الشهادة:',
+      'Email:': 'البريد الإلكتروني:',
+      'Experience:': 'الخبرة:',
+      'Tehran, Iran': 'طهران، إيران',
+      'B.S. Information and Communications Technology':
+        'بكالوريوس تكنولوجيا المعلومات والاتصالات',
+      '8+ years': 'أكثر من 8 سنوات',
+
+      'My work has crossed fintech, cybersecurity, real estate, and intelligent transportation—from platforms serving 1M+ users to distributed security agents, streaming data systems, and nationwide camera infrastructure. I’m most at home where reliability, performance, and clean architecture have to work together in production.':
+        'يمتد عملي عبر التكنولوجيا المالية والأمن السيبراني والعقارات والنقل الذكي، من منصات تخدم أكثر من مليون مستخدم إلى وكلاء أمن موزعين وأنظمة بيانات متدفقة وبنية تحتية للكاميرات على نطاق واسع. أركز بشكل خاص على الأنظمة التي يجب أن تجمع بين الموثوقية والأداء والهندسة النظيفة في بيئة الإنتاج.',
+
+      // Stats
+      '10+ Production Projects': 'أكثر من 10 مشاريع إنتاجية',
+      'successfully delivered and running in production':
+        'تم تسليمها بنجاح وتعمل في بيئة الإنتاج',
+
+      '1M+ Users Supported': 'أكثر من مليون مستخدم',
+      'using live services and platforms I contributed to':
+        'عبر خدمات ومنصات إنتاجية ساهمت في تطويرها',
+
+      '20+ Engineers Mentored': 'إرشاد أكثر من 20 مهندساً',
+      'across backend, data, infrastructure, and related fields':
+        'في الأنظمة الخلفية والبيانات والبنية التحتية والمجالات المرتبطة',
+
+      '15+ Critical Scale Challenges': 'أكثر من 15 تحدياً حرجاً في التوسع',
+      'resolved through production and disaster-recovery consulting':
+        'تم التعامل معها في أنظمة الإنتاج وسيناريوهات التعافي من الأعطال',
+
+      '15+ Cross-functional Teams': 'أكثر من 15 فريقاً متعدد التخصصات',
+      'collaborated across business, data, product, and technology':
+        'تعاون بين فرق الأعمال والبيانات والمنتج والتكنولوجيا',
+
+      'Top 3': 'أفضل 3',
+      'Major Financial Portfolio Platform':
+        'منصة كبرى لإدارة المحافظ المالية',
+      "implemented for one of Iran's three largest financial groups":
+        'تم تنفيذها لإحدى أكبر ثلاث مجموعات مالية في إيران',
+
+      // Skills
+      'Skills from my current resume.':
+        'التقنيات والممارسات الهندسية الواردة في سيرتي الذاتية الحالية.',
+
+      'Backend & Architecture':
+        'الأنظمة الخلفية والهندسة المعمارية',
+
+      'Data Engineering':
+        'هندسة البيانات',
+
+      'Databases':
+        'قواعد البيانات',
+
+      'Cloud, DevOps & Platform':
+        'السحابة وDevOps وهندسة المنصات',
+
+      'AI & ML':
+        'الذكاء الاصطناعي والتعلم الآلي',
+
+      'Testing & Delivery':
+        'الاختبارات والتسليم',
+
+      // Resume
+      'A career shaped around building, scaling, and improving production systems where performance and reliability are measurable.':
+        'مسيرة مهنية تتمحور حول بناء أنظمة الإنتاج وتوسيعها وتحسينها، حيث يمكن قياس الأداء والموثوقية بوضوح.',
+
+      'Engineering Profile':
+        'الملف الهندسي',
+
+      'Python-focused software engineer working across backend architecture, data engineering, and distributed systems. Experienced with real-time services, event-driven workflows, analytical data platforms, and performance-sensitive production workloads.':
+        'مهندس برمجيات متخصص في Python يعمل عبر هندسة الأنظمة الخلفية وهندسة البيانات والأنظمة الموزعة، مع خبرة في الخدمات اللحظية وتدفقات العمل القائمة على الأحداث ومنصات البيانات التحليلية وأحمال الإنتاج الحساسة للأداء.',
+
+      'Education':
+        'التعليم',
+
+      'Professional Experience':
+        'الخبرة المهنية',
+
+      'B.S. Information & Communications Technology':
+        'بكالوريوس تكنولوجيا المعلومات والاتصالات',
+
+      'Shamsipour Technical and Vocational College, Tehran':
+        'كلية شمس بور التقنية والمهنية، طهران',
+
+      'Senior Python Engineer, Data Systems':
+        'مهندس Python أول، أنظمة البيانات',
+
+      'Backend Engineer':
+        'مهندس أنظمة خلفية',
+
+      'Software Developer':
+        'مطوّر برمجيات',
+
+      'Karnameh | Tehran, Iran':
+        'كارنامه | طهران، إيران',
+
+      'Charisma Financial Group | Tehran, Iran':
+        'مجموعة كاريزما المالية | طهران، إيران',
+
+      'Bithome | Tehran, Iran':
+        'Bithome | طهران، إيران',
+
+      'Andisheh Negar Pars | Tehran, Iran':
+        'أنديشه نگار پارس | طهران، إيران',
+
+      'PFK | Tehran, Iran':
+        'PFK | طهران، إيران',
+
+      // Charisma
+      'Built a real-time portfolio management platform integrating backend services, data pipelines, and ML workflows, supporting 1M+ users, 8+ teams, and 10+ consuming services, with backend workloads across 5 Kubernetes pods and CI/CD via Azure DevOps.':
+        'بنيت منصة لحظية لإدارة المحافظ تجمع خدمات الأنظمة الخلفية ومسارات البيانات وتدفقات التعلم الآلي، وتدعم أكثر من مليون مستخدم و8 فرق وأكثر من 10 خدمات مستهلكة، مع تشغيل الأحمال عبر 5 وحدات Kubernetes وCI/CD باستخدام Azure DevOps.',
+
+      'Built 20+ reusable dbt staging, intermediate, and mart models with incremental materializations and automated data-quality tests, standardizing analytics datasets consumed across 8+ teams and 10+ downstream services.':
+        'بنيت أكثر من 20 نموذج dbt قابلاً لإعادة الاستخدام لمراحل staging وintermediate وmart مع تحديثات تدريجية واختبارات آلية لجودة البيانات، مما وحّد مجموعات البيانات التحليلية المستخدمة عبر أكثر من 8 فرق و10 خدمات.',
+
+      'Delivered 7+ Python/Airflow ETL pipelines to continuously refresh data across GraphQL APIs, MongoDB, Redis, relational databases, and Snowflake/BigQuery data warehouses for multiple teams and services.':
+        'طورت أكثر من 7 مسارات ETL باستخدام Python وAirflow لتحديث البيانات باستمرار عبر GraphQL وMongoDB وRedis وقواعد البيانات العلائقية ومستودعات Snowflake وBigQuery.',
+
+      'Designed FastAPI and Plotly Dash apps to monitor 5+ investment models generating 1,000+ predictions per market session.':
+        'صممت تطبيقات FastAPI وPlotly Dash لمراقبة أكثر من 5 نماذج استثمارية تنتج أكثر من 1000 توقع في كل جلسة سوق.',
+
+      'Enabled 40+ services via WSO2 API Gateway, delivered 7+ real-time Kafka pipelines, and continuously refreshed Snowflake and shared databases used across multiple teams.':
+        'فعّلت أكثر من 40 خدمة عبر WSO2 API Gateway وطورت أكثر من 7 مسارات Kafka لحظية مع تحديث مستمر لـ Snowflake وقواعد البيانات المشتركة.',
+
+      'Refactored large-scale databases and optimized data models using partitioning and indexing, improving query performance by 80%.':
+        'أعدت هيكلة قواعد بيانات كبيرة وحسّنت نماذج البيانات باستخدام التقسيم والفهارس، مما رفع أداء الاستعلامات بنسبة 80٪.',
+
+      'Established real-time PostgreSQL-to-Kafka CDC pipelines, enabling real-time synchronization and event-driven processing.':
+        'أنشأت مسارات CDC لحظية من PostgreSQL إلى Kafka لتمكين المزامنة الفورية والمعالجة القائمة على الأحداث.',
+
+      'Operationalized data-processing workflows for 1,400+ Tehran Stock Exchange instruments, supporting analytics and data teams.':
+        'شغلت تدفقات معالجة البيانات لأكثر من 1400 أداة مالية في بورصة طهران لدعم فرق البيانات والتحليلات.',
+
+      // Bithome
+      'Helped a 5-person Agile team successfully launch a real-estate crowdfunding platform, attracting investment for 5+ development projects.':
+        'ساهمت ضمن فريق Agile من 5 أشخاص في إطلاق منصة للتمويل الجماعي العقاري نجحت في جذب استثمارات لأكثر من 5 مشاريع تطويرية.',
+
+      'Improved endpoint performance by 60% by moving long-running tasks to asynchronous processing with Celery and Redis.':
+        'حسّنت أداء نقاط النهاية بنسبة 60٪ عبر نقل المهام طويلة التنفيذ إلى معالجة غير متزامنة باستخدام Celery وRedis.',
+
+      'Led a full Django back-office rebuild, including frontend delivery, improving workflows and cutting response times by 50%.':
+        'قدت إعادة بناء كاملة لنظام الإدارة باستخدام Django، بما في ذلك الواجهة الأمامية، مما حسّن تدفقات العمل وخفّض أوقات الاستجابة بنسبة 50٪.',
+
+      'Raised automated test coverage to 90% in GitLab CI/CD, increasing service reliability and reducing customer complaints by 20–50%.':
+        'رفعت تغطية الاختبارات الآلية إلى 90٪ ضمن GitLab CI/CD، مما حسّن موثوقية الخدمة وخفّض شكاوى العملاء بنسبة تتراوح بين 20٪ و50٪.',
+
+      'Optimized database queries and added profiling and monitoring, improving application performance by 25%.':
+        'حسّنت استعلامات قواعد البيانات وأضفت أدوات تحليل الأداء والمراقبة، مما رفع أداء التطبيق بنسبة 25٪.',
+
+      // Andisheh
+      'Implemented a distributed SIEM agent managing 1,000+ nodes with real-time health monitoring, remote command execution, and automated updates over AES-128-encrypted WebSockets using Celery and Redis.':
+        'طورت وكيل SIEM موزعاً يدير أكثر من 1000 عقدة مع مراقبة لحظية للحالة وتنفيذ أوامر عن بُعد وتحديثات آلية عبر WebSocket مشفّر باستخدام AES-128 وCelery وRedis.',
+
+      'Co-designed and developed 25+ security microservices, led Dockerization, and set up GCP communication, improving efficiency by 40%.':
+        'شاركت في تصميم وتطوير أكثر من 25 خدمة أمنية مصغّرة، وقُدت عملية Dockerization وإعداد الاتصال عبر GCP، مما حسّن الكفاءة بنسبة 40٪.',
+
+      'Integrated Elasticsearch, Logstash, and ElastAlert into real-time pipelines handling 1,000+ logs/sec for monitoring and anomaly detection.':
+        'دمجت Elasticsearch وLogstash وElastAlert في مسارات لحظية تعالج أكثر من 1000 سجل في الثانية للمراقبة واكتشاف الحالات الشاذة.',
+
+      // PFK
+      'Developed and maintained Java-based firmware for 1,200+ traffic-monitoring cameras deployed across 28+ cities.':
+        'طورت وصنت برمجيات Java ثابتة لأكثر من 1200 كاميرا لمراقبة المرور منتشرة في أكثر من 28 مدينة.',
+
+      'Architected a Python-based distributed system processing 100+ images/sec across the nationwide camera network.':
+        'صممت نظاماً موزعاً باستخدام Python يعالج أكثر من 100 صورة في الثانية عبر شبكة كاميرات واسعة النطاق.',
+
+      'Maintained ITS/ETC databases and infrastructure across 4 data centers, supporting reliable distributed traffic operations.':
+        'أدرت قواعد بيانات وبنية ITS/ETC عبر 4 مراكز بيانات لدعم عمليات مرور موزعة وموثوقة.',
+
+      // Key Achievements
+      'Selected work where scale, throughput, and measurable impact were impossible to hide.':
+        'أعمال مختارة يظهر فيها الحجم والإنتاجية والأثر القابل للقياس بشكل واضح.',
+
+      'Built for Seven-Figure Scale':
+        'بنية مصممة لمقياس يتجاوز المليون',
+
+      'Helped shape a real-time portfolio platform serving 1M+ users while supporting 8+ teams and 10+ downstream services.':
+        'ساهمت في بناء منصة محافظ لحظية تخدم أكثر من مليون مستخدم وتدعم أكثر من 8 فرق و10 خدمات مرتبطة.',
+
+      'Made Heavy Queries 80% Faster':
+        'تسريع الاستعلامات الثقيلة بنسبة 80٪',
+
+      'Reworked large-scale data models with partitioning and indexing, cutting query time dramatically without changing the product experience.':
+        'أعدت تصميم نماذج بيانات واسعة النطاق باستخدام التقسيم والفهارس، مما خفّض زمن الاستعلام بشكل كبير دون التأثير على تجربة المنتج.',
+
+      'One Control Plane, 1,000+ Nodes':
+        'منصة تحكم واحدة لأكثر من 1000 عقدة',
+
+      'Built a distributed security agent with real-time health checks, remote execution, automated updates, and encrypted WebSocket communication.':
+        'بنيت وكيلاً أمنياً موزعاً مع مراقبة لحظية وتنفيذ أوامر عن بُعد وتحديثات تلقائية واتصالات WebSocket مشفّرة.',
+
+      'Streaming 1,000+ Security Events/sec':
+        'معالجة أكثر من 1000 حدث أمني في الثانية',
+
+      'Connected Elasticsearch, Logstash, and ElastAlert into a real-time monitoring pipeline built for continuous anomaly detection.':
+        'ربطت Elasticsearch وLogstash وElastAlert في مسار مراقبة لحظي مصمم لاكتشاف الحالات الشاذة باستمرار.',
+
+      'Nationwide Vision Infrastructure':
+        'بنية تحتية واسعة النطاق للرؤية الحاسوبية',
+
+      'Worked on 1,200+ traffic cameras across 28+ cities and architected a Python distributed system processing 100+ images every second.':
+        'عملت على أكثر من 1200 كاميرا مرور في أكثر من 28 مدينة وصممت نظام Python موزعاً يعالج أكثر من 100 صورة في الثانية.',
+
+      'Built the Data Backbone':
+        'بناء العمود الفقري للبيانات',
+
+      'Delivered reusable dbt models, Airflow ETL, Kafka streams, and CDC workflows that became shared building blocks for analytics and production services.':
+        'طورت نماذج dbt قابلة لإعادة الاستخدام ومسارات Airflow ETL وتدفقات Kafka وعمليات CDC أصبحت مكونات مشتركة للتحليلات وخدمات الإنتاج.',
+
+      // Areas of Expertise
+      'Areas of Expertise':
+        'مجالات الخبرة',
+
+      'Where backend architecture, data platforms, distributed systems, and production reliability come together.':
+        'حيث تلتقي هندسة الأنظمة الخلفية ومنصات البيانات والأنظمة الموزعة وموثوقية الإنتاج.',
+
+      'Backend Architecture':
+        'هندسة الأنظمة الخلفية',
+
+      'Python, FastAPI, Django, REST and GraphQL APIs, DDD, microservices, and production-grade service design.':
+        'Python وFastAPI وDjango وواجهات REST وGraphQL وDDD والخدمات المصغّرة وتصميم خدمات مناسبة لبيئات الإنتاج.',
+
+      'Data Platforms & Pipelines':
+        'منصات البيانات ومساراتها',
+
+      'Airflow, dbt, ETL/ELT, CDC, data modeling, warehousing, and high-volume ingestion across operational and analytical systems.':
+        'Airflow وdbt وETL/ELT وCDC ونمذجة البيانات ومستودعات البيانات واستيعاب البيانات عالية الحجم عبر الأنظمة التشغيلية والتحليلية.',
+
+      'Real-Time & Distributed Systems':
+        'الأنظمة اللحظية والموزعة',
+
+      'Kafka, Redis, Celery, event-driven architecture, distributed processing, and scalable systems built for real-time workloads.':
+        'Kafka وRedis وCelery والهندسة القائمة على الأحداث والمعالجة الموزعة وأنظمة قابلة للتوسع للأحمال اللحظية.',
+
+      'Performance & Reliability':
+        'الأداء والموثوقية',
+
+      'Query optimization, partitioning, indexing, observability, monitoring, automated testing, and production resilience under load.':
+        'تحسين الاستعلامات والتقسيم والفهرسة وقابلية المراقبة والاختبارات الآلية ومرونة أنظمة الإنتاج تحت الضغط.',
+
+      'Cloud & Platform Engineering':
+        'هندسة السحابة والمنصات',
+
+      'Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, and GCP for dependable deployment and platform automation.':
+        'Docker وKubernetes وTerraform وCI/CD وLinux وAWS وAzure وGCP للنشر الموثوق وأتمتة المنصات.',
+
+      'AI & Intelligent Systems':
+        'الذكاء الاصطناعي والأنظمة الذكية',
+
+      'ML pipelines, MLOps, LLM applications, AI agents, and integrating intelligent workflows into production software.':
+        'مسارات التعلم الآلي وMLOps وتطبيقات LLM ووكلاء الذكاء الاصطناعي ودمج التدفقات الذكية في أنظمة الإنتاج.',
+
+      // Recommendations / Contact
+      'Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.':
+        'آراء قادة الهندسة والمديرين والمرشدين والزملاء الذين عملوا معي مباشرة.',
+
+      'View Recommendations on LinkedIn':
+        'عرض التوصيات على LinkedIn',
+
+      'Open to senior backend, Python, data engineering, and distributed-systems opportunities.':
+        'متاح لفرص متقدمة في هندسة الأنظمة الخلفية وPython وهندسة البيانات والأنظمة الموزعة.',
+
+      'Location': 'الموقع',
+      'Phone': 'الهاتف',
+      'Email': 'البريد الإلكتروني',
+      'Copyright': 'حقوق النشر',
+      'All Rights Reserved': 'جميع الحقوق محفوظة',
+      'WhatsApp': 'واتساب'
     },
+
     tr: {
-      'Home':'Ana Sayfa','About':'Hakkımda','Skills':'Yetenekler','Resume':'Özgeçmiş','Highlights':'Başarılar','Expertise':'Uzmanlık','Freelance & Marketing':'Freelance ve Pazarlama','Recommendations':'Referanslar','Contact':'İletişim',
-      "I'm a":'Ben bir','Senior Software Engineer':'Kıdemli Yazılım Mühendisi','Download Resume':'Özgeçmişi İndir',
-      'Data-driven software engineer with deep expertise in scalable microservices, distributed system design, backend architecture, and high-throughput data platforms.':'Ölçeklenebilir mikroservisler, dağıtık sistem tasarımı, backend mimarisi ve yüksek kapasiteli veri platformlarında derin uzmanlığa sahip, veri odaklı yazılım mühendisi.',
-      'Senior Software Engineer & Data Systems Specialist':'Kıdemli Yazılım Mühendisi ve Veri Sistemleri Uzmanı',
-      'I design reliable APIs, event-driven services, backend architecture, ETL pipelines, and real-time data systems with a strong focus on performance, maintainability, and data quality.':'Performans, sürdürülebilirlik ve veri kalitesine odaklanarak güvenilir API’ler, olay güdümlü servisler, backend mimarileri, ETL hatları ve gerçek zamanlı veri sistemleri tasarlıyorum.',
-      'Location:':'Konum:','Phone:':'Telefon:','Degree:':'Eğitim:','Email:':'E-posta:','Experience:':'Deneyim:','Tehran, Iran':'Tahran, İran','B.S. in ICT':'Bilgi ve İletişim Teknolojileri Lisansı','8+ years':'8+ yıl',
-      'My work spans financial technologies, data engineering, security platforms, and intelligent systems. I enjoy translating complex business and data requirements into clean, scalable software and collaborating with teams to raise engineering standards. Alongside software engineering, I have also worked independently in digital marketing and media, combining technology, content, audience insight, and commercial thinking to help brands strengthen their online presence.':'Çalışmalarım finansal teknolojiler, veri mühendisliği, güvenlik platformları ve akıllı sistemleri kapsıyor. Karmaşık iş ve veri gereksinimlerini temiz ve ölçeklenebilir yazılımlara dönüştürmekten ve mühendislik standartlarını yükseltmek için ekiplerle çalışmaktan keyif alıyorum. Yazılım mühendisliğinin yanında dijital pazarlama ve medya alanında da bağımsız çalışarak markaların çevrim içi varlığını güçlendirmelerine yardımcı oldum.',
-      '10+ Production Projects':'10+ Üretim Projesi','successfully delivered and running in production':'başarıyla teslim edildi ve üretimde çalışıyor','1M+ Users Supported':'1 Milyon+ Kullanıcı','using live services and platforms I contributed to':'katkıda bulunduğum canlı servis ve platformlarda','20+ Engineers Mentored':'20+ Mühendise Mentorluk','across backend, data, infrastructure, and related fields':'backend, veri, altyapı ve ilgili alanlarda','15+ Critical Scale Challenges':'15+ Kritik Ölçekleme Sorunu','resolved through production and disaster-recovery consulting':'üretim ve felaket kurtarma danışmanlığıyla çözüldü','15+ Cross-functional Teams':'15+ Disiplinler Arası Ekip','collaborated across business, data, product, and technology':'iş, veri, ürün ve teknoloji ekipleriyle iş birliği','Major Financial Portfolio Platform':'Büyük Finansal Portföy Platformu','implemented for one of Iran\'s three largest financial groups':'İran’ın en büyük üç finans grubundan biri için geliştirildi',
-      'Core technologies and engineering practices used across backend, data, cloud, and distributed systems projects.':'Backend, veri, bulut ve dağıtık sistem projelerinde kullanılan temel teknolojiler ve mühendislik uygulamaları.','Backend Engineering':'Backend Mühendisliği','Data Engineering':'Veri Mühendisliği','Databases & Search':'Veritabanları ve Arama','Messaging & Distributed Systems':'Mesajlaşma ve Dağıtık Sistemler','Cloud & DevOps':'Bulut ve DevOps','Quality & Observability':'Kalite ve Gözlemlenebilirlik',
-      'Professional experience building scalable software, data, and distributed systems across finance, cybersecurity, industrial technologies and enterprise platforms.':'Finans, siber güvenlik, endüstriyel teknolojiler ve kurumsal platformlarda ölçeklenebilir yazılım, veri ve dağıtık sistemler geliştirme deneyimi.','Summary':'Özet','Education':'Eğitim','Professional Experience':'Profesyonel Deneyim','Present':'Günümüz','Back-end Developer':'Backend Geliştirici','Software Developer':'Yazılım Geliştirici',
-      'Key Achievements':'Önemli Başarılar','Selected engineering contributions across finance, cybersecurity, enterprise software, industrial systems, and large-scale distributed platforms.':'Finans, siber güvenlik, kurumsal yazılım, endüstriyel sistemler ve büyük ölçekli dağıtık platformlardaki seçili mühendislik katkıları.','Scalable Distributed Systems':'Ölçeklenebilir Dağıtık Sistemler','Performance Engineering':'Performans Mühendisliği','Production Reliability':'Üretim Güvenilirliği','Enterprise Financial Platforms':'Kurumsal Finans Platformları','Technical Leadership':'Teknik Liderlik','Business Impact':'İş Etkisi',
-      'Areas of Expertise':'Uzmanlık Alanları','Engineering capabilities for teams building dependable, scalable, and data-intensive products.':'Güvenilir, ölçeklenebilir ve veri yoğun ürünler geliştiren ekipler için mühendislik yetkinlikleri.','Backend Architecture':'Backend Mimarisi','Distributed Systems':'Dağıtık Sistemler','Performance & Reliability':'Performans ve Güvenilirlik','Engineering Collaboration':'Mühendislik İş Birliği',
-      'Freelance Digital Marketing & Media':'Freelance Dijital Pazarlama ve Medya','Meta Advertising':'Meta Reklamcılığı','Social Media Strategy':'Sosyal Medya Stratejisi','Performance Marketing':'Performans Pazarlaması','Content & Media Production':'İçerik ve Medya Üretimi','Brand & Content Consulting':'Marka ve İçerik Danışmanlığı','Technology-Driven Growth':'Teknoloji Odaklı Büyüme','Freelance Capabilities':'Freelance Yetkinlikler','Professional Interests':'Profesyonel İlgi Alanları','Freelance Digital Marketing & Media Consultant':'Freelance Dijital Pazarlama ve Medya Danışmanı','Freelance':'Freelance','Self-employed · Remote':'Serbest çalışan · Uzaktan',
-      'Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.':'Benimle doğrudan çalışmış mühendislik liderleri, yöneticiler, mentorlar ve ekip arkadaşlarının görüşleri.','View Recommendations on LinkedIn':'LinkedIn Referanslarını Gör','Open to senior backend, Python, data engineering, and distributed-systems opportunities.':'Kıdemli backend, Python, veri mühendisliği ve dağıtık sistem fırsatlarına açığım.','Location':'Konum','Phone':'Telefon','Email':'E-posta','All Rights Reserved':'Tüm Hakları Saklıdır','Copyright':'Telif Hakkı'
+      // Navigation
+      'Home': 'Ana Sayfa',
+      'About': 'Hakkımda',
+      'Skills': 'Yetenekler',
+      'Resume': 'Özgeçmiş',
+      'Highlights': 'Başarılar',
+      'Expertise': 'Uzmanlık',
+      'Recommendations': 'Referanslar',
+      'Contact': 'İletişim',
+
+      // Hero
+      "I'm a": 'Ben bir',
+      'Senior Software Engineer': 'Kıdemli Yazılım Mühendisi',
+      'Download Resume': 'Özgeçmişi İndir',
+
+      // About
+      'I build backend and data systems that stay fast, observable, and dependable as traffic, data volume, and operational complexity grow.':
+        'Trafik, veri hacmi ve operasyonel karmaşıklık büyürken hızlı, gözlemlenebilir ve güvenilir kalan backend ve veri sistemleri geliştiriyorum.',
+
+      'Backend, Data & Distributed Systems':
+        'Backend, Veri ve Dağıtık Sistemler',
+
+      '8+ years turning complex production requirements into Python services, real-time pipelines, and scalable platforms.':
+        '8+ yıldır karmaşık üretim gereksinimlerini Python servislerine, gerçek zamanlı veri hatlarına ve ölçeklenebilir platformlara dönüştürüyorum.',
+
+      'Location:': 'Konum:',
+      'Phone:': 'Telefon:',
+      'GitHub:': 'GitHub:',
+      'Degree:': 'Eğitim:',
+      'Email:': 'E-posta:',
+      'Experience:': 'Deneyim:',
+      'Tehran, Iran': 'Tahran, İran',
+      'B.S. Information and Communications Technology':
+        'Bilgi ve İletişim Teknolojileri Lisansı',
+      '8+ years': '8+ yıl',
+
+      'My work has crossed fintech, cybersecurity, real estate, and intelligent transportation—from platforms serving 1M+ users to distributed security agents, streaming data systems, and nationwide camera infrastructure. I’m most at home where reliability, performance, and clean architecture have to work together in production.':
+        'Çalışmalarım fintech, siber güvenlik, gayrimenkul ve akıllı ulaşım alanlarını kapsıyor; 1 milyon+ kullanıcıya hizmet veren platformlardan dağıtık güvenlik ajanlarına, streaming veri sistemlerine ve geniş ölçekli kamera altyapılarına kadar uzanıyor. Özellikle güvenilirlik, performans ve temiz mimarinin üretimde birlikte çalışması gereken sistemlere odaklanıyorum.',
+
+      // Stats
+      '10+ Production Projects': '10+ Üretim Projesi',
+      'successfully delivered and running in production':
+        'başarıyla teslim edildi ve üretimde çalışıyor',
+
+      '1M+ Users Supported': '1 Milyon+ Kullanıcı',
+      'using live services and platforms I contributed to':
+        'katkıda bulunduğum canlı servis ve platformlarda',
+
+      '20+ Engineers Mentored': '20+ Mühendise Mentorluk',
+      'across backend, data, infrastructure, and related fields':
+        'backend, veri, altyapı ve ilgili alanlarda',
+
+      '15+ Critical Scale Challenges':
+        '15+ Kritik Ölçekleme Problemi',
+
+      'resolved through production and disaster-recovery consulting':
+        'üretim ve felaket kurtarma çalışmalarında çözüldü',
+
+      '15+ Cross-functional Teams':
+        '15+ Disiplinler Arası Ekip',
+
+      'collaborated across business, data, product, and technology':
+        'iş, veri, ürün ve teknoloji ekipleriyle birlikte çalışıldı',
+
+      'Top 3': 'İlk 3',
+
+      'Major Financial Portfolio Platform':
+        'Büyük Finansal Portföy Platformu',
+
+      "implemented for one of Iran's three largest financial groups":
+        'İran’ın en büyük üç finans grubundan biri için geliştirildi',
+
+      // Skills
+      'Skills from my current resume.':
+        'Güncel özgeçmişimde yer alan teknoloji ve mühendislik yetkinlikleri.',
+
+      'Backend & Architecture':
+        'Backend ve Mimari',
+
+      'Data Engineering':
+        'Veri Mühendisliği',
+
+      'Databases':
+        'Veritabanları',
+
+      'Cloud, DevOps & Platform':
+        'Bulut, DevOps ve Platform',
+
+      'AI & ML':
+        'Yapay Zekâ ve Makine Öğrenimi',
+
+      'Testing & Delivery':
+        'Test ve Teslimat',
+
+      // Resume
+      'A career shaped around building, scaling, and improving production systems where performance and reliability are measurable.':
+        'Performans ve güvenilirliğin ölçülebilir olduğu üretim sistemlerini geliştirme, ölçeklendirme ve iyileştirme üzerine şekillenmiş bir kariyer.',
+
+      'Engineering Profile':
+        'Mühendislik Profili',
+
+      'Python-focused software engineer working across backend architecture, data engineering, and distributed systems. Experienced with real-time services, event-driven workflows, analytical data platforms, and performance-sensitive production workloads.':
+        'Backend mimarisi, veri mühendisliği ve dağıtık sistemlerde çalışan Python odaklı yazılım mühendisi. Gerçek zamanlı servisler, olay güdümlü iş akışları, analitik veri platformları ve performans hassas üretim yüklerinde deneyimli.',
+
+      'Education':
+        'Eğitim',
+
+      'Professional Experience':
+        'Profesyonel Deneyim',
+
+      'B.S. Information & Communications Technology':
+        'Bilgi ve İletişim Teknolojileri Lisansı',
+
+      'Shamsipour Technical and Vocational College, Tehran':
+        'Shamsipour Teknik ve Meslek Yüksekokulu, Tahran',
+
+      'Senior Python Engineer, Data Systems':
+        'Kıdemli Python Mühendisi, Veri Sistemleri',
+
+      'Backend Engineer':
+        'Backend Mühendisi',
+
+      'Software Developer':
+        'Yazılım Geliştirici',
+
+      'Karnameh | Tehran, Iran':
+        'Karnameh | Tahran, İran',
+
+      'Charisma Financial Group | Tehran, Iran':
+        'Charisma Finans Grubu | Tahran, İran',
+
+      'Bithome | Tehran, Iran':
+        'Bithome | Tahran, İran',
+
+      'Andisheh Negar Pars | Tehran, Iran':
+        'Andisheh Negar Pars | Tahran, İran',
+
+      'PFK | Tehran, Iran':
+        'PFK | Tahran, İran',
+
+      // Charisma
+      'Built a real-time portfolio management platform integrating backend services, data pipelines, and ML workflows, supporting 1M+ users, 8+ teams, and 10+ consuming services, with backend workloads across 5 Kubernetes pods and CI/CD via Azure DevOps.':
+        'Backend servisleri, veri hatları ve ML iş akışlarını birleştiren gerçek zamanlı bir portföy yönetim platformu geliştirdim. Sistem 1 milyon+ kullanıcıyı, 8+ ekibi ve 10+ tüketici servisi destekledi; backend yükleri 5 Kubernetes podunda çalıştı ve CI/CD Azure DevOps üzerinden yönetildi.',
+
+      'Built 20+ reusable dbt staging, intermediate, and mart models with incremental materializations and automated data-quality tests, standardizing analytics datasets consumed across 8+ teams and 10+ downstream services.':
+        'Artımlı materialization ve otomatik veri kalitesi testleri kullanan 20+ yeniden kullanılabilir dbt staging, intermediate ve mart modeli geliştirerek 8+ ekip ve 10+ servisin kullandığı analitik veri setlerini standartlaştırdım.',
+
+      'Delivered 7+ Python/Airflow ETL pipelines to continuously refresh data across GraphQL APIs, MongoDB, Redis, relational databases, and Snowflake/BigQuery data warehouses for multiple teams and services.':
+        'GraphQL API’leri, MongoDB, Redis, ilişkisel veritabanları ve Snowflake/BigQuery veri ambarları arasında sürekli veri güncelleyen 7+ Python/Airflow ETL hattı geliştirdim.',
+
+      'Designed FastAPI and Plotly Dash apps to monitor 5+ investment models generating 1,000+ predictions per market session.':
+        'Her piyasa seansında 1.000+ tahmin üreten 5+ yatırım modelini izlemek için FastAPI ve Plotly Dash uygulamaları geliştirdim.',
+
+      'Enabled 40+ services via WSO2 API Gateway, delivered 7+ real-time Kafka pipelines, and continuously refreshed Snowflake and shared databases used across multiple teams.':
+        'WSO2 API Gateway üzerinden 40+ servisi devreye aldım, 7+ gerçek zamanlı Kafka hattı geliştirdim ve Snowflake ile paylaşılan veritabanlarını sürekli güncelledim.',
+
+      'Refactored large-scale databases and optimized data models using partitioning and indexing, improving query performance by 80%.':
+        'Büyük ölçekli veritabanlarını yeniden yapılandırıp partitioning ve indexing kullanarak veri modellerini optimize ettim ve sorgu performansını %80 artırdım.',
+
+      'Established real-time PostgreSQL-to-Kafka CDC pipelines, enabling real-time synchronization and event-driven processing.':
+        'Gerçek zamanlı senkronizasyon ve olay güdümlü işleme için PostgreSQL’den Kafka’ya CDC hatları kurdum.',
+
+      'Operationalized data-processing workflows for 1,400+ Tehran Stock Exchange instruments, supporting analytics and data teams.':
+        'Tahran Borsası’ndaki 1.400+ finansal enstrüman için veri işleme akışlarını üretime alarak analiz ve veri ekiplerini destekledim.',
+
+      // Bithome
+      'Helped a 5-person Agile team successfully launch a real-estate crowdfunding platform, attracting investment for 5+ development projects.':
+        '5 kişilik Agile ekibin gayrimenkul crowdfunding platformunu başarıyla yayına almasına katkı sağladım; platform 5+ geliştirme projesi için yatırım topladı.',
+
+      'Improved endpoint performance by 60% by moving long-running tasks to asynchronous processing with Celery and Redis.':
+        'Uzun süren işleri Celery ve Redis ile asenkron işlemeye taşıyarak endpoint performansını %60 artırdım.',
+
+      'Led a full Django back-office rebuild, including frontend delivery, improving workflows and cutting response times by 50%.':
+        'Frontend teslimatı dahil Django tabanlı back-office sisteminin tamamen yeniden geliştirilmesine liderlik ederek iş akışlarını iyileştirdim ve yanıt sürelerini %50 azalttım.',
+
+      'Raised automated test coverage to 90% in GitLab CI/CD, increasing service reliability and reducing customer complaints by 20–50%.':
+        'GitLab CI/CD içinde otomatik test kapsamını %90’a çıkararak servis güvenilirliğini artırdım ve müşteri şikâyetlerini %20–50 azalttım.',
+
+      'Optimized database queries and added profiling and monitoring, improving application performance by 25%.':
+        'Veritabanı sorgularını optimize edip profiling ve monitoring ekleyerek uygulama performansını %25 artırdım.',
+
+      // Andisheh
+      'Implemented a distributed SIEM agent managing 1,000+ nodes with real-time health monitoring, remote command execution, and automated updates over AES-128-encrypted WebSockets using Celery and Redis.':
+        'Celery ve Redis kullanarak AES-128 ile şifrelenmiş WebSocket bağlantıları üzerinden gerçek zamanlı sağlık kontrolü, uzaktan komut çalıştırma ve otomatik güncelleme sağlayan, 1.000+ node yöneten dağıtık SIEM ajanı geliştirdim.',
+
+      'Co-designed and developed 25+ security microservices, led Dockerization, and set up GCP communication, improving efficiency by 40%.':
+        '25+ güvenlik mikroservisinin tasarım ve geliştirmesine katkı sağladım, Dockerization sürecine liderlik ettim ve GCP iletişimini kurarak verimliliği %40 artırdım.',
+
+      'Integrated Elasticsearch, Logstash, and ElastAlert into real-time pipelines handling 1,000+ logs/sec for monitoring and anomaly detection.':
+        'Elasticsearch, Logstash ve ElastAlert’i saniyede 1.000+ log işleyen gerçek zamanlı monitoring ve anomaly detection hatlarına entegre ettim.',
+
+      // PFK
+      'Developed and maintained Java-based firmware for 1,200+ traffic-monitoring cameras deployed across 28+ cities.':
+        '28+ şehirde kullanılan 1.200+ trafik izleme kamerası için Java tabanlı firmware geliştirdim ve bakımını yaptım.',
+
+      'Architected a Python-based distributed system processing 100+ images/sec across the nationwide camera network.':
+        'Geniş ölçekli kamera ağı genelinde saniyede 100+ görüntü işleyen Python tabanlı dağıtık sistem mimarisi geliştirdim.',
+
+      'Maintained ITS/ETC databases and infrastructure across 4 data centers, supporting reliable distributed traffic operations.':
+        '4 veri merkezindeki ITS/ETC veritabanı ve altyapısını yöneterek güvenilir dağıtık trafik operasyonlarını destekledim.',
+
+      // Key Achievements
+      'Selected work where scale, throughput, and measurable impact were impossible to hide.':
+        'Ölçek, throughput ve ölçülebilir etkinin açıkça görüldüğü seçili çalışmalar.',
+
+      'Built for Seven-Figure Scale':
+        'Milyon Kullanıcı Ölçeği İçin Tasarlandı',
+
+      'Helped shape a real-time portfolio platform serving 1M+ users while supporting 8+ teams and 10+ downstream services.':
+        '1 milyon+ kullanıcıya hizmet veren ve 8+ ekip ile 10+ downstream servisi destekleyen gerçek zamanlı portföy platformunun geliştirilmesine katkı sağladım.',
+
+      'Made Heavy Queries 80% Faster':
+        'Ağır Sorguları %80 Hızlandırdım',
+
+      'Reworked large-scale data models with partitioning and indexing, cutting query time dramatically without changing the product experience.':
+        'Büyük ölçekli veri modellerini partitioning ve indexing ile yeniden tasarlayarak ürün deneyimini değiştirmeden sorgu sürelerini önemli ölçüde azalttım.',
+
+      'One Control Plane, 1,000+ Nodes':
+        'Tek Kontrol Katmanı, 1.000+ Node',
+
+      'Built a distributed security agent with real-time health checks, remote execution, automated updates, and encrypted WebSocket communication.':
+        'Gerçek zamanlı sağlık kontrolleri, uzaktan komut çalıştırma, otomatik güncellemeler ve şifreli WebSocket iletişimine sahip dağıtık güvenlik ajanı geliştirdim.',
+
+      'Streaming 1,000+ Security Events/sec':
+        'Saniyede 1.000+ Güvenlik Olayı',
+
+      'Connected Elasticsearch, Logstash, and ElastAlert into a real-time monitoring pipeline built for continuous anomaly detection.':
+        'Elasticsearch, Logstash ve ElastAlert’i sürekli anomaly detection için tasarlanmış gerçek zamanlı monitoring hattında birleştirdim.',
+
+      'Nationwide Vision Infrastructure':
+        'Geniş Ölçekli Görüntü Altyapısı',
+
+      'Worked on 1,200+ traffic cameras across 28+ cities and architected a Python distributed system processing 100+ images every second.':
+        '28+ şehirde 1.200+ trafik kamerası üzerinde çalıştım ve saniyede 100+ görüntü işleyen Python dağıtık sistem mimarisi geliştirdim.',
+
+      'Built the Data Backbone':
+        'Veri Omurgasını Geliştirdim',
+
+      'Delivered reusable dbt models, Airflow ETL, Kafka streams, and CDC workflows that became shared building blocks for analytics and production services.':
+        'Analitik ve üretim servisleri için ortak yapı taşlarına dönüşen yeniden kullanılabilir dbt modelleri, Airflow ETL hatları, Kafka stream’leri ve CDC iş akışları geliştirdim.',
+
+      // Areas of Expertise
+      'Areas of Expertise':
+        'Uzmanlık Alanları',
+
+      'Where backend architecture, data platforms, distributed systems, and production reliability come together.':
+        'Backend mimarisi, veri platformları, dağıtık sistemler ve üretim güvenilirliğinin kesiştiği alanlar.',
+
+      'Backend Architecture':
+        'Backend Mimarisi',
+
+      'Python, FastAPI, Django, REST and GraphQL APIs, DDD, microservices, and production-grade service design.':
+        'Python, FastAPI, Django, REST ve GraphQL API’leri, DDD, mikroservisler ve production-grade servis tasarımı.',
+
+      'Data Platforms & Pipelines':
+        'Veri Platformları ve Pipeline’lar',
+
+      'Airflow, dbt, ETL/ELT, CDC, data modeling, warehousing, and high-volume ingestion across operational and analytical systems.':
+        'Airflow, dbt, ETL/ELT, CDC, veri modelleme, veri ambarları ve operasyonel/analitik sistemlerde yüksek hacimli veri ingestion.',
+
+      'Real-Time & Distributed Systems':
+        'Gerçek Zamanlı ve Dağıtık Sistemler',
+
+      'Kafka, Redis, Celery, event-driven architecture, distributed processing, and scalable systems built for real-time workloads.':
+        'Kafka, Redis, Celery, olay güdümlü mimari, dağıtık işleme ve gerçek zamanlı yükler için ölçeklenebilir sistemler.',
+
+      'Performance & Reliability':
+        'Performans ve Güvenilirlik',
+
+      'Query optimization, partitioning, indexing, observability, monitoring, automated testing, and production resilience under load.':
+        'Sorgu optimizasyonu, partitioning, indexing, observability, monitoring, otomatik testler ve yük altında üretim dayanıklılığı.',
+
+      'Cloud & Platform Engineering':
+        'Bulut ve Platform Mühendisliği',
+
+      'Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, and GCP for dependable deployment and platform automation.':
+        'Güvenilir deployment ve platform otomasyonu için Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure ve GCP.',
+
+      'AI & Intelligent Systems':
+        'Yapay Zekâ ve Akıllı Sistemler',
+
+      'ML pipelines, MLOps, LLM applications, AI agents, and integrating intelligent workflows into production software.':
+        'ML pipeline’ları, MLOps, LLM uygulamaları, AI agent’ları ve akıllı iş akışlarının production yazılımlarına entegrasyonu.',
+
+      // Recommendations / Contact
+      'Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.':
+        'Benimle doğrudan çalışmış mühendislik liderleri, yöneticiler, mentorlar ve ekip arkadaşlarının görüşleri.',
+
+      'View Recommendations on LinkedIn':
+        'LinkedIn Referanslarını Gör',
+
+      'Open to senior backend, Python, data engineering, and distributed-systems opportunities.':
+        'Kıdemli backend, Python, veri mühendisliği ve dağıtık sistem fırsatlarına açığım.',
+
+      'Location': 'Konum',
+      'Phone': 'Telefon',
+      'Email': 'E-posta',
+      'Copyright': 'Telif Hakkı',
+      'All Rights Reserved': 'Tüm Hakları Saklıdır',
+      'WhatsApp': 'WhatsApp'
     }
   };
 
-  Object.assign(translations.ar, {
-  "GitHub:": "GitHub:",
-  "Top 3": "أفضل 3",
-  "Senior Software Engineer focused on scalable backend services, real-time data platforms, and collaborative engineering.": "مهندس برمجيات أول يركز على خدمات الأنظمة الخلفية القابلة للتوسع، ومنصات البيانات اللحظية، والعمل الهندسي التعاوني.",
-  "B.S. Information & Communications Technology": "بكالوريوس في تكنولوجيا المعلومات والاتصالات",
-  "Shamsipour Technical and Vocational College, Tehran": "كلية شمس بور التقنية والمهنية، طهران",
-  "Nov 2025 - Present": "نوفمبر 2025 - حتى الآن",
-  "Karnameh, Tehran": "كارنامه، طهران",
-  "Senior Python Engineer, Data Systems": "مهندس Python أول، أنظمة البيانات",
-  "May 2023 - Oct 2025": "مايو 2023 - أكتوبر 2025",
-  "Charisma Financial Group, Tehran": "مجموعة كاريزما المالية، طهران",
-  "Designed and delivered a portfolio management platform combining backend engineering, data engineering, and machine learning.": "صممت وسلمت منصة لإدارة المحافظ تجمع بين هندسة الأنظمة الخلفية وهندسة البيانات والتعلم الآلي.",
-  "Built scalable Airflow ETL pipelines powering organization-wide data workflows and analytics.": "بنيت مسارات ETL قابلة للتوسع باستخدام Airflow لدعم تدفقات البيانات والتحليلات على مستوى المؤسسة.",
-  "Developed FastAPI and Plotly Dash applications for monitoring investment predictions and model performance.": "طورت تطبيقات FastAPI وPlotly Dash لمراقبة توقعات الاستثمار وأداء النماذج.",
-  "Improved legacy PostgreSQL performance by 80% through partitioning and query optimization.": "حسّنت أداء PostgreSQL القديم بنسبة 80٪ عبر التقسيم وتحسين الاستعلامات.",
-  "Scaled real-time processing for more than one million customer profiles.": "وسّعت المعالجة اللحظية لأكثر من مليون ملف عميل.",
-  "Implemented PostgreSQL-to-Kafka CDC pipelines and managed data processing for 1,400+ Tehran Stock Exchange tickers.": "نفذت مسارات CDC من PostgreSQL إلى Kafka وأدرت معالجة بيانات أكثر من 1400 رمز في بورصة طهران.",
-  "Performed regular code reviews and established maintainable engineering standards across the team.": "أجريت مراجعات دورية للكود ورسخت معايير هندسية قابلة للصيانة داخل الفريق.",
-  "Feb 2022 - May 2023": "فبراير 2022 - مايو 2023",
-  "Bithome, Tehran": "بيت هوم، طهران",
-  "Contributed to a new backend architecture as part of a 5-member Agile engineering team.": "ساهمت في بنية خلفية جديدة ضمن فريق هندسي رشيق من خمسة أعضاء.",
-  "Improved API responsiveness by 63% using Celery and Redis asynchronous background processing.": "حسّنت استجابة واجهات API بنسبة 63٪ باستخدام المعالجة غير المتزامنة عبر Celery وRedis.",
-  "Rebuilt the back-office platform with Django, reducing customer response time by 50%.": "أعدت بناء منصة الإدارة باستخدام Django، مما خفّض زمن الاستجابة للعملاء بنسبة 50٪.",
-  "Expanded automated testing, reducing customer complaints by 23% while improving product quality.": "وسعت الاختبارات الآلية، فخفضت شكاوى العملاء بنسبة 23٪ مع تحسين جودة المنتج.",
-  "Built Sentry monitoring dashboards for faster issue detection and debugging.": "أنشأت لوحات مراقبة عبر Sentry لتسريع اكتشاف المشكلات وتصحيحها.",
-  "Optimized database queries, increasing overall application performance by 25%.": "حسّنت استعلامات قاعدة البيانات، فرفعت أداء التطبيق الإجمالي بنسبة 25٪.",
-  "Jun 2020 - Feb 2022": "يونيو 2020 - فبراير 2022",
-  "Andisheh Negar Pars, Tehran": "أنديشه نگار پارس، طهران",
-  "Developed core components of a SIEM platform managing over 1,000 enterprise clients.": "طورت المكونات الأساسية لمنصة SIEM تدير أكثر من 1000 عميل مؤسسي.",
-  "Implemented secure WebSocket communication using AES-128 encryption.": "نفذت اتصال WebSocket آمناً باستخدام تشفير AES-128.",
-  "Introduced Celery, Redis, Docker, and Nginx for scalable asynchronous processing and deployment.": "أدخلت Celery وRedis وDocker وNginx للمعالجة غير المتزامنة والنشر القابلين للتوسع.",
-  "Participated in designing and implementing a microservices architecture, improving engineering efficiency by 40%.": "شاركت في تصميم وتنفيذ بنية خدمات مصغّرة، مما حسّن الكفاءة الهندسية بنسبة 40٪.",
-  "Dockerized projects and documented deployment processes to streamline onboarding.": "حوّلت المشاريع إلى حاويات Docker ووثقت عمليات النشر لتسهيل انضمام المطورين.",
-  "Integrated Elasticsearch, Logstash, and ElastAlert for centralized log analysis and real-time alerting.": "دمجت Elasticsearch وLogstash وElastAlert لتحليل السجلات مركزياً والتنبيه اللحظي.",
-  "Nov 2017 - Jun 2020": "نوفمبر 2017 - يونيو 2020",
-  "PFK, Tehran": "PFK، طهران",
-  "Developed and maintained Java-based firmware for intelligent transportation cameras.": "طورت وصنت برمجيات ثابتة بلغة Java لكاميرات النقل الذكية.",
-  "Built Python software supporting real-time camera operations across 28 cities.": "بنيت برمجيات Python تدعم تشغيل الكاميرات لحظياً في 28 مدينة.",
-  "Optimized MySQL databases to improve processing performance and system reliability.": "حسّنت قواعد بيانات MySQL لرفع أداء المعالجة وموثوقية النظام.",
-  "Managed ITS/ETC databases and server infrastructure across multiple data centers.": "أدرت قواعد بيانات ITS/ETC وبنية الخوادم في عدة مراكز بيانات.",
-  "Designed and delivered scalable backend architectures capable of supporting high-volume production workloads and mission-critical business services.": "صممت وسلمت بُنى خلفية قابلة للتوسع تدعم أحمال إنتاج كبيرة وخدمات أعمال بالغة الأهمية.",
-  "Optimized databases, APIs, caching layers, asynchronous processing, and distributed services to improve overall system performance.": "حسّنت قواعد البيانات وواجهات API وطبقات التخزين المؤقت والمعالجة غير المتزامنة والخدمات الموزعة لرفع الأداء العام.",
-  "Solved complex production incidents and improved system resilience, availability, monitoring, and operational stability.": "حللت حوادث إنتاج معقدة وحسّنت مرونة النظام وتوافره ومراقبته واستقراره التشغيلي.",
-  "Delivered software solutions for large financial organizations, supporting critical business operations and portfolio management.": "قدمت حلولاً برمجية لمؤسسات مالية كبيرة تدعم العمليات الحيوية وإدارة المحافظ.",
-  "Mentored engineers, collaborated with cross-functional teams, and contributed to software architecture and engineering best practices.": "أرشدت المهندسين وتعاونت مع فرق متعددة التخصصات وساهمت في هندسة البرمجيات وأفضل الممارسات.",
-  "Built reliable software products that improved customer experience, accelerated delivery, and supported business growth at scale.": "بنيت منتجات برمجية موثوقة حسّنت تجربة العملاء وسرّعت التسليم ودعمت نمو الأعمال على نطاق واسع.",
-  "Scalable APIs and services using Python, FastAPI, Django, Flask, and event-driven patterns.": "واجهات API وخدمات قابلة للتوسع باستخدام Python وFastAPI وDjango وFlask والأنماط القائمة على الأحداث.",
-  "ETL, CDC, data modeling, Airflow orchestration, and reliable batch and real-time pipelines.": "ETL وCDC ونمذجة البيانات وتنسيق Airflow ومسارات موثوقة للمعالجة الدفعية واللحظية.",
-  "Kafka, RabbitMQ, Redis, Celery, microservices, and fault-aware system design.": "Kafka وRabbitMQ وRedis وCelery والخدمات المصغّرة وتصميم أنظمة واعٍ بالأعطال.",
-  "Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP, and Nginx.": "Docker وKubernetes وTerraform وCI/CD وLinux وAWS وAzure وGCP وNginx.",
-  "Database tuning, profiling, automated tests, observability, Sentry, Grafana, and logging.": "ضبط قواعد البيانات وتحليل الأداء والاختبارات الآلية وقابلية المراقبة وSentry وGrafana والسجلات.",
-  "Code reviews, standards, documentation, Agile delivery, and maintainable software design.": "مراجعة الكود والمعايير والتوثيق والتسليم الرشيق وتصميم برمجيات قابلة للصيانة.",
-  "Freelance experience helping businesses and personal brands improve their digital presence through Meta advertising, social media strategy, content creation, media production, and performance-focused consulting.": "خبرة مستقلة في مساعدة الشركات والعلامات الشخصية على تحسين حضورها الرقمي عبر إعلانات ميتا واستراتيجية التواصل الاجتماعي وصناعة المحتوى والإنتاج الإعلامي والاستشارات القائمة على الأداء.",
-  "Planning and managing Facebook and Instagram advertising campaigns, including campaign structure, audience targeting, creative direction, testing, and performance optimization.": "تخطيط وإدارة حملات إعلانية على Facebook وInstagram، بما يشمل هيكلة الحملة واستهداف الجمهور والتوجيه الإبداعي والاختبار وتحسين الأداء.",
-  "Developing practical social media strategies focused on brand awareness, audience growth, engagement, customer acquisition, and consistent digital communication.": "تطوير استراتيجيات عملية للتواصل الاجتماعي تركز على الوعي بالعلامة ونمو الجمهور والتفاعل واكتساب العملاء والتواصل الرقمي المتسق.",
-  "Using campaign analytics, audience insights, conversion signals, and continuous experimentation to improve advertising efficiency and measurable business outcomes.": "استخدام تحليلات الحملات وفهم الجمهور وإشارات التحويل والتجارب المستمرة لتحسين كفاءة الإعلان ونتائج الأعمال القابلة للقياس.",
-  "Creating photography, videography, promotional videos, campaign assets, and multimedia content designed for social platforms and digital brand communication.": "إنتاج الصور والفيديوهات الترويجية ومواد الحملات والمحتوى متعدد الوسائط المصمم للمنصات الاجتماعية والتواصل الرقمي للعلامة.",
-  "Advising clients on brand positioning, messaging, content planning, digital communication, and practical ways to build a stronger and more coherent online identity.": "تقديم المشورة للعملاء حول تموضع العلامة والرسائل وتخطيط المحتوى والتواصل الرقمي والطرق العملية لبناء هوية إلكترونية أقوى وأكثر اتساقاً.",
-  "Combining software engineering, data, automation, and marketing knowledge to connect technical decisions with customer experience and business growth.": "دمج هندسة البرمجيات والبيانات والأتمتة والتسويق لربط القرارات التقنية بتجربة العميل ونمو الأعمال.",
-  "Meta Ads, Facebook and Instagram campaign management, social media marketing, performance marketing, content strategy, audience targeting, campaign analytics, media production, photography, videography, brand positioning, and digital communication.": "إعلانات ميتا، إدارة حملات Facebook وInstagram، التسويق عبر التواصل الاجتماعي، تسويق الأداء، استراتيجية المحتوى، استهداف الجمهور، تحليلات الحملات، الإنتاج الإعلامي، التصوير، الفيديو، تموضع العلامة، والتواصل الرقمي.",
-  "I am interested in the intersection of software engineering, data, artificial intelligence, digital marketing, media, branding, and consumer behavior—especially products that use technology and audience insight to create measurable business value.": "أهتم بالتقاطع بين هندسة البرمجيات والبيانات والذكاء الاصطناعي والتسويق الرقمي والإعلام والعلامات التجارية وسلوك المستهلك، خصوصاً المنتجات التي تستخدم التقنية وفهم الجمهور لصناعة قيمة تجارية قابلة للقياس.",
-  "Planned and managed Meta Ads campaigns for businesses and personal brands across Facebook and Instagram.": "خططت وأدرت حملات إعلانات ميتا للشركات والعلامات الشخصية عبر Facebook وInstagram.",
-  "Developed social media strategies for brand awareness, audience growth, engagement, and customer acquisition.": "طورت استراتيجيات تواصل اجتماعي للوعي بالعلامة ونمو الجمهور والتفاعل واكتساب العملاء.",
-  "Produced marketing content including photography, videography, promotional videos, and digital media assets.": "أنتجت محتوى تسويقياً يشمل التصوير والفيديوهات الترويجية ومواد الإعلام الرقمي.",
-  "Improved campaign performance through audience targeting, analytics, testing, and ongoing optimization.": "حسّنت أداء الحملات عبر استهداف الجمهور والتحليلات والاختبار والتحسين المستمر.",
-  "Consulted clients on branding, content planning, digital communication, and online business growth.": "قدمت استشارات للعملاء في بناء العلامة وتخطيط المحتوى والتواصل الرقمي ونمو الأعمال عبر الإنترنت.",
-  "Combined marketing expertise with technical knowledge to help clients make stronger digital and data-informed decisions.": "جمعت الخبرة التسويقية مع المعرفة التقنية لمساعدة العملاء على اتخاذ قرارات رقمية أقوى قائمة على البيانات.",
-  "Chief Technology Officer at Karnameh": "مدير التقنية في كارنامه",
-  "Direct manager · June 16, 2026": "المدير المباشر · 16 يونيو 2026",
-  "Machine Learning Engineer": "مهندس تعلم آلي",
-  "Direct manager · January 7, 2026": "المدير المباشر · 7 يناير 2026",
-  "Software Engineer & Technical Lead": "مهندس برمجيات وقائد تقني",
-  "Senior colleague · November 25, 2023": "زميل أقدم · 25 نوفمبر 2023",
-  "Chief Information Security Officer": "مدير أمن المعلومات",
-  "Direct manager · August 21, 2022": "المدير المباشر · 21 أغسطس 2022",
-  "SIEM Engineer": "مهندس SIEM",
-  "Teammate · August 21, 2022": "زميل فريق · 21 أغسطس 2022",
-  "DevOps Engineer at Sotoon": "مهندس DevOps في ستون",
-  "Teammate · August 18, 2022": "زميل فريق · 18 أغسطس 2022",
-  "Database Engineer": "مهندس قواعد بيانات",
-  "Teammate · August 17, 2022": "زميل فريق · 17 أغسطس 2022",
-  "Former Teammate": "زميل سابق",
-  "Teammate · August 16, 2022": "زميل فريق · 16 أغسطس 2022",
-  "C++ Developer": "مطوّر C++",
-  "Security Architect & Engineer": "مهندس ومعماري أمن",
-  "Direct manager · August 16, 2022": "المدير المباشر · 16 أغسطس 2022"
-});
-  Object.assign(translations.tr, {
-  "GitHub:": "GitHub:",
-  "Top 3": "İlk 3",
-  "Senior Software Engineer focused on scalable backend services, real-time data platforms, and collaborative engineering.": "Ölçeklenebilir backend servisleri, gerçek zamanlı veri platformları ve ekip çalışmasına odaklanan kıdemli yazılım mühendisi.",
-  "B.S. Information & Communications Technology": "Bilgi ve İletişim Teknolojileri Lisansı",
-  "Shamsipour Technical and Vocational College, Tehran": "Shamsipour Teknik ve Meslek Yüksekokulu, Tahran",
-  "Nov 2025 - Present": "Kasım 2025 - Günümüz",
-  "Karnameh, Tehran": "Karnameh, Tahran",
-  "Senior Python Engineer, Data Systems": "Kıdemli Python Mühendisi, Veri Sistemleri",
-  "May 2023 - Oct 2025": "Mayıs 2023 - Ekim 2025",
-  "Charisma Financial Group, Tehran": "Charisma Finans Grubu, Tahran",
-  "Designed and delivered a portfolio management platform combining backend engineering, data engineering, and machine learning.": "Backend mühendisliği, veri mühendisliği ve makine öğrenimini birleştiren bir portföy yönetim platformu tasarlayıp teslim ettim.",
-  "Built scalable Airflow ETL pipelines powering organization-wide data workflows and analytics.": "Kurum genelindeki veri akışlarını ve analizleri destekleyen ölçeklenebilir Airflow ETL hatları kurdum.",
-  "Developed FastAPI and Plotly Dash applications for monitoring investment predictions and model performance.": "Yatırım tahminlerini ve model performansını izlemek için FastAPI ve Plotly Dash uygulamaları geliştirdim.",
-  "Improved legacy PostgreSQL performance by 80% through partitioning and query optimization.": "Bölümleme ve sorgu optimizasyonuyla eski PostgreSQL sisteminin performansını %80 artırdım.",
-  "Scaled real-time processing for more than one million customer profiles.": "Bir milyondan fazla müşteri profili için gerçek zamanlı işlemeyi ölçeklendirdim.",
-  "Implemented PostgreSQL-to-Kafka CDC pipelines and managed data processing for 1,400+ Tehran Stock Exchange tickers.": "PostgreSQL’den Kafka’ya CDC hatları kurdum ve Tahran Borsası’ndaki 1.400’den fazla sembolün veri işlemesini yönettim.",
-  "Performed regular code reviews and established maintainable engineering standards across the team.": "Düzenli kod incelemeleri yaptım ve ekip genelinde sürdürülebilir mühendislik standartları oluşturdum.",
-  "Feb 2022 - May 2023": "Şubat 2022 - Mayıs 2023",
-  "Bithome, Tehran": "Bithome, Tahran",
-  "Contributed to a new backend architecture as part of a 5-member Agile engineering team.": "Beş kişilik Agile mühendislik ekibinde yeni backend mimarisine katkıda bulundum.",
-  "Improved API responsiveness by 63% using Celery and Redis asynchronous background processing.": "Celery ve Redis ile eşzamansız arka plan işleme kullanarak API yanıt hızını %63 artırdım.",
-  "Rebuilt the back-office platform with Django, reducing customer response time by 50%.": "Back-office platformunu Django ile yeniden kurarak müşteri yanıt süresini %50 azalttım.",
-  "Expanded automated testing, reducing customer complaints by 23% while improving product quality.": "Otomatik test kapsamını genişleterek müşteri şikâyetlerini %23 azalttım ve ürün kalitesini yükselttim.",
-  "Built Sentry monitoring dashboards for faster issue detection and debugging.": "Sorunları daha hızlı tespit etmek ve ayıklamak için Sentry izleme panoları oluşturdum.",
-  "Optimized database queries, increasing overall application performance by 25%.": "Veritabanı sorgularını optimize ederek genel uygulama performansını %25 artırdım.",
-  "Jun 2020 - Feb 2022": "Haziran 2020 - Şubat 2022",
-  "Andisheh Negar Pars, Tehran": "Andisheh Negar Pars, Tahran",
-  "Developed core components of a SIEM platform managing over 1,000 enterprise clients.": "1.000’den fazla kurumsal müşteriyi yöneten bir SIEM platformunun temel bileşenlerini geliştirdim.",
-  "Implemented secure WebSocket communication using AES-128 encryption.": "AES-128 şifreleme kullanarak güvenli WebSocket iletişimi gerçekleştirdim.",
-  "Introduced Celery, Redis, Docker, and Nginx for scalable asynchronous processing and deployment.": "Ölçeklenebilir eşzamansız işleme ve dağıtım için Celery, Redis, Docker ve Nginx kullandım.",
-  "Participated in designing and implementing a microservices architecture, improving engineering efficiency by 40%.": "Mikroservis mimarisinin tasarım ve uygulamasına katılarak mühendislik verimliliğini %40 artırdım.",
-  "Dockerized projects and documented deployment processes to streamline onboarding.": "Projeleri Docker’a taşıdım ve işe alım sürecini kolaylaştırmak için dağıtım süreçlerini belgeledim.",
-  "Integrated Elasticsearch, Logstash, and ElastAlert for centralized log analysis and real-time alerting.": "Merkezi log analizi ve gerçek zamanlı uyarılar için Elasticsearch, Logstash ve ElastAlert entegrasyonu yaptım.",
-  "Nov 2017 - Jun 2020": "Kasım 2017 - Haziran 2020",
-  "PFK, Tehran": "PFK, Tahran",
-  "Developed and maintained Java-based firmware for intelligent transportation cameras.": "Akıllı ulaşım kameraları için Java tabanlı firmware geliştirdim ve bakımını yaptım.",
-  "Built Python software supporting real-time camera operations across 28 cities.": "28 şehirde gerçek zamanlı kamera operasyonlarını destekleyen Python yazılımı geliştirdim.",
-  "Optimized MySQL databases to improve processing performance and system reliability.": "İşleme performansını ve sistem güvenilirliğini artırmak için MySQL veritabanlarını optimize ettim.",
-  "Managed ITS/ETC databases and server infrastructure across multiple data centers.": "Birden fazla veri merkezindeki ITS/ETC veritabanlarını ve sunucu altyapısını yönettim.",
-  "Designed and delivered scalable backend architectures capable of supporting high-volume production workloads and mission-critical business services.": "Yüksek hacimli üretim yüklerini ve kritik iş servislerini destekleyen ölçeklenebilir backend mimarileri tasarlayıp teslim ettim.",
-  "Optimized databases, APIs, caching layers, asynchronous processing, and distributed services to improve overall system performance.": "Genel sistem performansını artırmak için veritabanlarını, API’leri, önbellek katmanlarını, eşzamansız işlemleri ve dağıtık servisleri optimize ettim.",
-  "Solved complex production incidents and improved system resilience, availability, monitoring, and operational stability.": "Karmaşık üretim sorunlarını çözdüm; sistem dayanıklılığını, erişilebilirliğini, izlenebilirliğini ve operasyonel kararlılığını geliştirdim.",
-  "Delivered software solutions for large financial organizations, supporting critical business operations and portfolio management.": "Büyük finans kuruluşları için kritik iş operasyonlarını ve portföy yönetimini destekleyen yazılım çözümleri sundum.",
-  "Mentored engineers, collaborated with cross-functional teams, and contributed to software architecture and engineering best practices.": "Mühendislere mentorluk yaptım, disiplinler arası ekiplerle çalıştım ve yazılım mimarisi ile mühendislik en iyi uygulamalarına katkıda bulundum.",
-  "Built reliable software products that improved customer experience, accelerated delivery, and supported business growth at scale.": "Müşteri deneyimini iyileştiren, teslimatı hızlandıran ve büyük ölçekte iş büyümesini destekleyen güvenilir yazılım ürünleri geliştirdim.",
-  "Scalable APIs and services using Python, FastAPI, Django, Flask, and event-driven patterns.": "Python, FastAPI, Django, Flask ve olay güdümlü desenlerle ölçeklenebilir API ve servisler.",
-  "ETL, CDC, data modeling, Airflow orchestration, and reliable batch and real-time pipelines.": "ETL, CDC, veri modelleme, Airflow orkestrasyonu ve güvenilir toplu/gerçek zamanlı veri hatları.",
-  "Kafka, RabbitMQ, Redis, Celery, microservices, and fault-aware system design.": "Kafka, RabbitMQ, Redis, Celery, mikroservisler ve hata toleranslı sistem tasarımı.",
-  "Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP, and Nginx.": "Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP ve Nginx.",
-  "Database tuning, profiling, automated tests, observability, Sentry, Grafana, and logging.": "Veritabanı ayarlama, profilleme, otomatik testler, gözlemlenebilirlik, Sentry, Grafana ve loglama.",
-  "Code reviews, standards, documentation, Agile delivery, and maintainable software design.": "Kod incelemeleri, standartlar, dokümantasyon, Agile teslimat ve sürdürülebilir yazılım tasarımı.",
-  "Freelance experience helping businesses and personal brands improve their digital presence through Meta advertising, social media strategy, content creation, media production, and performance-focused consulting.": "İşletmelerin ve kişisel markaların Meta reklamları, sosyal medya stratejisi, içerik üretimi, medya prodüksiyonu ve performans odaklı danışmanlıkla dijital varlıklarını geliştirmelerine yardımcı olduğum freelance deneyim.",
-  "Planning and managing Facebook and Instagram advertising campaigns, including campaign structure, audience targeting, creative direction, testing, and performance optimization.": "Kampanya yapısı, hedef kitle seçimi, kreatif yönlendirme, test ve performans optimizasyonu dahil Facebook ve Instagram reklam kampanyalarını planlama ve yönetme.",
-  "Developing practical social media strategies focused on brand awareness, audience growth, engagement, customer acquisition, and consistent digital communication.": "Marka bilinirliği, kitle büyümesi, etkileşim, müşteri kazanımı ve tutarlı dijital iletişime odaklanan uygulanabilir sosyal medya stratejileri geliştirme.",
-  "Using campaign analytics, audience insights, conversion signals, and continuous experimentation to improve advertising efficiency and measurable business outcomes.": "Reklam verimliliğini ve ölçülebilir iş sonuçlarını artırmak için kampanya analitiği, kitle içgörüleri, dönüşüm sinyalleri ve sürekli deneylerden yararlanma.",
-  "Creating photography, videography, promotional videos, campaign assets, and multimedia content designed for social platforms and digital brand communication.": "Sosyal platformlar ve dijital marka iletişimi için fotoğraf, video, tanıtım filmi, kampanya materyali ve multimedya içerik üretme.",
-  "Advising clients on brand positioning, messaging, content planning, digital communication, and practical ways to build a stronger and more coherent online identity.": "Müşterilere marka konumlandırma, mesajlaşma, içerik planlama, dijital iletişim ve daha güçlü bir çevrim içi kimlik oluşturma konusunda danışmanlık verme.",
-  "Combining software engineering, data, automation, and marketing knowledge to connect technical decisions with customer experience and business growth.": "Teknik kararları müşteri deneyimi ve iş büyümesiyle ilişkilendirmek için yazılım mühendisliği, veri, otomasyon ve pazarlama bilgisini birleştirme.",
-  "Meta Ads, Facebook and Instagram campaign management, social media marketing, performance marketing, content strategy, audience targeting, campaign analytics, media production, photography, videography, brand positioning, and digital communication.": "Meta Ads, Facebook ve Instagram kampanya yönetimi, sosyal medya pazarlaması, performans pazarlaması, içerik stratejisi, kitle hedefleme, kampanya analitiği, medya prodüksiyonu, fotoğraf, video, marka konumlandırma ve dijital iletişim.",
-  "I am interested in the intersection of software engineering, data, artificial intelligence, digital marketing, media, branding, and consumer behavior—especially products that use technology and audience insight to create measurable business value.": "Yazılım mühendisliği, veri, yapay zekâ, dijital pazarlama, medya, markalaşma ve tüketici davranışının kesişimiyle; özellikle teknoloji ve kitle içgörüsünü ölçülebilir iş değerine dönüştüren ürünlerle ilgileniyorum.",
-  "Planned and managed Meta Ads campaigns for businesses and personal brands across Facebook and Instagram.": "İşletmeler ve kişisel markalar için Facebook ve Instagram’da Meta Ads kampanyaları planlayıp yönettim.",
-  "Developed social media strategies for brand awareness, audience growth, engagement, and customer acquisition.": "Marka bilinirliği, kitle büyümesi, etkileşim ve müşteri kazanımı için sosyal medya stratejileri geliştirdim.",
-  "Produced marketing content including photography, videography, promotional videos, and digital media assets.": "Fotoğraf, video, tanıtım filmleri ve dijital medya materyalleri dahil pazarlama içerikleri ürettim.",
-  "Improved campaign performance through audience targeting, analytics, testing, and ongoing optimization.": "Hedef kitle seçimi, analiz, test ve sürekli optimizasyonla kampanya performansını artırdım.",
-  "Consulted clients on branding, content planning, digital communication, and online business growth.": "Müşterilere markalaşma, içerik planlama, dijital iletişim ve çevrim içi iş büyümesi konularında danışmanlık verdim.",
-  "Combined marketing expertise with technical knowledge to help clients make stronger digital and data-informed decisions.": "Müşterilerin daha güçlü, veriye dayalı dijital kararlar almasına yardımcı olmak için pazarlama uzmanlığını teknik bilgiyle birleştirdim.",
-  "Chief Technology Officer at Karnameh": "Karnameh Teknoloji Direktörü",
-  "Direct manager · June 16, 2026": "Doğrudan yönetici · 16 Haziran 2026",
-  "Machine Learning Engineer": "Makine Öğrenimi Mühendisi",
-  "Direct manager · January 7, 2026": "Doğrudan yönetici · 7 Ocak 2026",
-  "Software Engineer & Technical Lead": "Yazılım Mühendisi ve Teknik Lider",
-  "Senior colleague · November 25, 2023": "Kıdemli çalışma arkadaşı · 25 Kasım 2023",
-  "Chief Information Security Officer": "Bilgi Güvenliği Direktörü",
-  "Direct manager · August 21, 2022": "Doğrudan yönetici · 21 Ağustos 2022",
-  "SIEM Engineer": "SIEM Mühendisi",
-  "Teammate · August 21, 2022": "Takım arkadaşı · 21 Ağustos 2022",
-  "DevOps Engineer at Sotoon": "Sotoon’da DevOps Mühendisi",
-  "Teammate · August 18, 2022": "Takım arkadaşı · 18 Ağustos 2022",
-  "Database Engineer": "Veritabanı Mühendisi",
-  "Teammate · August 17, 2022": "Takım arkadaşı · 17 Ağustos 2022",
-  "Former Teammate": "Eski Takım Arkadaşı",
-  "Teammate · August 16, 2022": "Takım arkadaşı · 16 Ağustos 2022",
-  "C++ Developer": "C++ Geliştiricisi",
-  "Security Architect & Engineer": "Güvenlik Mimarı ve Mühendisi",
-  "Direct manager · August 16, 2022": "Doğrudan yönetici · 16 Ağustos 2022"
-});
 
-
-  Object.assign(translations.ar, {
-    "View Recommendations on LinkedIn": "عرض التوصيات على LinkedIn",
-    "Purya consistently demonstrated strong engineering capabilities, excellent problem-solving skills, and a solid understanding of scalable software systems. He worked effectively with product owners and cross-functional teams, improved system performance, delivered reliably, and contributed positively to increasing our team's delivery speed. I would confidently recommend him.": "أظهر پوریا باستمرار قدرات هندسية قوية ومهارات ممتازة في حل المشكلات وفهماً متيناً للأنظمة البرمجية القابلة للتوسع. عمل بفاعلية مع مالكي المنتجات والفرق متعددة التخصصات، وحسّن أداء الأنظمة، والتزم بالتسليم، وأسهم في زيادة سرعة إنجاز الفريق. أوصي به بكل ثقة.",
-    "Purya is a strong and reliable backend developer with excellent experience in FastAPI, SQL databases, Kafka, Redis, and other backend technologies. He consistently delivered clean, well-structured code with clear documentation and showed strong problem-solving skills, creativity, ownership, and teamwork.": "پوریا مطور أنظمة خلفية قوي وموثوق، ويتمتع بخبرة ممتازة في FastAPI وقواعد بيانات SQL وKafka وRedis وغيرها من تقنيات الأنظمة الخلفية. كان يسلّم باستمرار كوداً نظيفاً ومنظماً مع توثيق واضح، وأظهر مهارات قوية في حل المشكلات والإبداع وتحمل المسؤولية والعمل الجماعي.",
-    "Purya's Python expertise was instrumental in transforming the BitHome management panel within a remarkably short timeframe. His ability to navigate complex tasks with precision and efficiency is commendable. He was consistently reliable when trusted with critical tasks and delivered exceptional results.": "كانت خبرة پوریا في Python عاملاً أساسياً في تطوير لوحة إدارة BitHome خلال مدة قصيرة بشكل لافت. قدرته على التعامل مع المهام المعقدة بدقة وكفاءة جديرة بالتقدير. كان موثوقاً دائماً عند إسناد المهام الحرجة إليه وحقق نتائج استثنائية.",
-    "We hired Purya as a Python developer to implement our security client/server agent. During our work together, he consistently studied and researched new technologies, remained eager to learn, and knew how to support his colleagues.": "وظفنا پوریا كمطور Python لتنفيذ عميل وخادم الأمان الخاص بنا. خلال عملنا معاً، واصل دراسة التقنيات الجديدة والبحث فيها، وحافظ على شغفه بالتعلم، وكان يعرف كيف يدعم زملاءه.",
-    "Purya is proactive, result-oriented, responsible, and technically sound. He is always ready to put in the energy and time needed to get the job done. He is a great developer and has my full recommendation.": "پوریا مبادر ويركز على النتائج ويتحمل المسؤولية ويتمتع بكفاءة تقنية قوية. وهو مستعد دائماً لبذل الوقت والجهد اللازمين لإنجاز العمل. إنه مطور ممتاز وأوصي به بالكامل.",
-    "Purya always put in his best effort to make the business successful. He has a strong determination to learn and improve his skills continuously. Any company would be lucky to have him as an employee.": "كان پوریا يبذل دائماً أفضل ما لديه لنجاح العمل. لديه إصرار قوي على التعلم وتطوير مهاراته باستمرار، وأي شركة ستكون محظوظة بانضمامه إليها.",
-    "Purya is a hard-working professional and talented developer. I admire his accuracy and clean coding. Perseverance, technical knowledge, and problem-solving are among his standout qualities, especially during high-pressure tasks.": "پوریا محترف مجتهد ومطور موهوب. أقدّر دقته وكتابته النظيفة للكود. المثابرة والمعرفة التقنية وحل المشكلات من أبرز صفاته، خصوصاً في المهام ذات الضغط العالي.",
-    "Purya is very good with people and has the ability to maximize their potential. He was committed, focused on delivering on time, and consistently performed at a high level while inspiring the team to do its best.": "پوریا بارع في التعامل مع الناس ولديه قدرة على إبراز أفضل إمكاناتهم. كان ملتزماً ويركز على التسليم في الموعد، ويحافظ على أداء مرتفع مع تحفيز الفريق لتقديم أفضل ما لديه.",
-    "Purya communicates well with people and clients, supports colleagues, and gets things done. He keeps everyone aligned around the main goal, and his assistance made a meaningful impact on our success.": "يتواصل پوریا جيداً مع الأشخاص والعملاء، ويدعم زملاءه وينجز المهام. يحافظ على توافق الجميع حول الهدف الرئيسي، وكان لدعمه أثر ملموس في نجاحنا.",
-    "Purya is passionate about writing code and solving problems through creative and innovative software. He contributes ideas, respects leadership, tackles assignments enthusiastically, and is well-liked by clients and respected by coworkers.": "پوریا شغوف بكتابة الكود وحل المشكلات عبر برمجيات إبداعية ومبتكرة. يشارك بالأفكار ويحترم القيادة ويتعامل مع المهام بحماس، ويحظى بتقدير العملاء واحترام زملائه.",
-    "WhatsApp": "واتساب"
-  });
-
-  Object.assign(translations.tr, {
-    "View Recommendations on LinkedIn": "LinkedIn Referanslarını Gör",
-    "Purya consistently demonstrated strong engineering capabilities, excellent problem-solving skills, and a solid understanding of scalable software systems. He worked effectively with product owners and cross-functional teams, improved system performance, delivered reliably, and contributed positively to increasing our team's delivery speed. I would confidently recommend him.": "Purya sürekli olarak güçlü mühendislik yetkinlikleri, mükemmel problem çözme becerileri ve ölçeklenebilir yazılım sistemleri konusunda sağlam bir anlayış sergiledi. Ürün sahipleri ve farklı disiplinlerden ekiplerle etkili çalıştı, sistem performansını geliştirdi, güvenilir teslimatlar yaptı ve ekibimizin teslimat hızının artmasına olumlu katkı sağladı. Kendisini gönül rahatlığıyla tavsiye ederim.",
-    "Purya is a strong and reliable backend developer with excellent experience in FastAPI, SQL databases, Kafka, Redis, and other backend technologies. He consistently delivered clean, well-structured code with clear documentation and showed strong problem-solving skills, creativity, ownership, and teamwork.": "Purya; FastAPI, SQL veritabanları, Kafka, Redis ve diğer backend teknolojilerinde çok iyi deneyime sahip güçlü ve güvenilir bir backend geliştiricisidir. Açık dokümantasyonla temiz ve iyi yapılandırılmış kodlar teslim etti; problem çözme, yaratıcılık, sorumluluk alma ve ekip çalışması konularında güçlü beceriler gösterdi.",
-    "Purya's Python expertise was instrumental in transforming the BitHome management panel within a remarkably short timeframe. His ability to navigate complex tasks with precision and efficiency is commendable. He was consistently reliable when trusted with critical tasks and delivered exceptional results.": "Purya'nın Python uzmanlığı, BitHome yönetim panelinin dikkat çekici derecede kısa bir sürede dönüştürülmesinde belirleyici oldu. Karmaşık görevleri hassasiyet ve verimlilikle yönetme becerisi takdire değerdi. Kritik görevlerde her zaman güvenilir davrandı ve olağanüstü sonuçlar üretti.",
-    "We hired Purya as a Python developer to implement our security client/server agent. During our work together, he consistently studied and researched new technologies, remained eager to learn, and knew how to support his colleagues.": "Purya'yı güvenlik istemci/sunucu ajanımızı geliştirmek üzere Python geliştiricisi olarak işe aldık. Birlikte çalıştığımız dönemde yeni teknolojileri sürekli araştırdı, öğrenme isteğini korudu ve çalışma arkadaşlarına nasıl destek olacağını iyi biliyordu.",
-    "Purya is proactive, result-oriented, responsible, and technically sound. He is always ready to put in the energy and time needed to get the job done. He is a great developer and has my full recommendation.": "Purya proaktif, sonuç odaklı, sorumluluk sahibi ve teknik açıdan güçlüdür. İşin tamamlanması için gereken zamanı ve enerjiyi ayırmaya her zaman hazırdır. Çok iyi bir geliştiricidir ve kendisini kesinlikle tavsiye ederim.",
-    "Purya always put in his best effort to make the business successful. He has a strong determination to learn and improve his skills continuously. Any company would be lucky to have him as an employee.": "Purya işin başarılı olması için her zaman elinden gelenin en iyisini yaptı. Öğrenme ve becerilerini sürekli geliştirme konusunda güçlü bir kararlılığa sahiptir. Her şirket onu çalışanı olarak bünyesinde bulundurduğu için şanslı olur.",
-    "Purya is a hard-working professional and talented developer. I admire his accuracy and clean coding. Perseverance, technical knowledge, and problem-solving are among his standout qualities, especially during high-pressure tasks.": "Purya çalışkan bir profesyonel ve yetenekli bir geliştiricidir. Hassasiyetine ve temiz kod yazmasına hayranım. Özellikle yüksek baskı altındaki görevlerde azmi, teknik bilgisi ve problem çözme becerisi öne çıkar.",
-    "Purya is very good with people and has the ability to maximize their potential. He was committed, focused on delivering on time, and consistently performed at a high level while inspiring the team to do its best.": "Purya insan ilişkilerinde çok iyidir ve insanların potansiyelini en üst düzeye çıkarabilir. Taahhütlerine bağlıydı, zamanında teslimata odaklandı ve ekibi en iyisini yapmaya teşvik ederken sürekli yüksek performans gösterdi.",
-    "Purya communicates well with people and clients, supports colleagues, and gets things done. He keeps everyone aligned around the main goal, and his assistance made a meaningful impact on our success.": "Purya insanlarla ve müşterilerle iyi iletişim kurar, çalışma arkadaşlarını destekler ve işleri sonuçlandırır. Herkesi ana hedef etrafında uyumlu tutar; desteği başarımız üzerinde anlamlı bir etki yarattı.",
-    "Purya is passionate about writing code and solving problems through creative and innovative software. He contributes ideas, respects leadership, tackles assignments enthusiastically, and is well-liked by clients and respected by coworkers.": "Purya kod yazmaya ve yaratıcı, yenilikçi yazılımlarla problem çözmeye tutkuyla bağlıdır. Fikirleriyle katkı sağlar, yönetime saygı duyar, görevleri heyecanla üstlenir; müşteriler tarafından sevilir ve çalışma arkadaşları tarafından saygı görür.",
-    "WhatsApp": "WhatsApp"
-  });
-  const catalog = {"t1":{"en":"Home","ar":"الرئيسية","tr":"Ana Sayfa"},"t2":{"en":"About","ar":"نبذة عني","tr":"Hakkımda"},"t3":{"en":"Skills","ar":"المهارات","tr":"Yetenekler"},"t4":{"en":"Resume","ar":"السيرة الذاتية","tr":"Özgeçmiş"},"t5":{"en":"Highlights","ar":"الإنجازات","tr":"Başarılar"},"t6":{"en":"Expertise","ar":"الخبرات","tr":"Uzmanlık"},"t7":{"en":"Freelance & Marketing","ar":"العمل الحر والتسويق","tr":"Freelance ve Pazarlama"},"t8":{"en":"Recommendations","ar":"التوصيات","tr":"Referanslar"},"t9":{"en":"Contact","ar":"تواصل معي","tr":"İletişim"},"t10":{"en":"I'm a","ar":"أنا","tr":"Ben bir"},"t11":{"en":"Senior Software Engineer","ar":"مهندس برمجيات أول","tr":"Kıdemli Yazılım Mühendisi"},"t12":{"en":"Download Resume","ar":"تحميل السيرة الذاتية","tr":"Özgeçmişi İndir"},"t13":{"en":"About","ar":"نبذة عني","tr":"Hakkımda"},"t14":{"en":"Data-driven software engineer with deep expertise in scalable microservices, distributed system design, backend architecture, and high-throughput data platforms.","ar":"مهندس برمجيات يعتمد على البيانات، بخبرة عميقة في الخدمات المصغّرة القابلة للتوسع، وتصميم الأنظمة الموزعة، وهندسة الأنظمة الخلفية، ومنصات البيانات عالية الإنتاجية.","tr":"Ölçeklenebilir mikroservisler, dağıtık sistem tasarımı, backend mimarisi ve yüksek kapasiteli veri platformlarında derin uzmanlığa sahip, veri odaklı yazılım mühendisi."},"t15":{"en":"Senior Software Engineer & Data Systems Specialist","ar":"مهندس برمجيات أول ومتخصص في أنظمة البيانات","tr":"Kıdemli Yazılım Mühendisi ve Veri Sistemleri Uzmanı"},"t16":{"en":"I design reliable APIs, event-driven services, backend architecture, ETL pipelines, and real-time data systems with a strong focus on performance, maintainability, and data quality.","ar":"أصمم واجهات API موثوقة، وخدمات قائمة على الأحداث، وبنى خلفية، ومسارات ETL، وأنظمة بيانات لحظية مع تركيز قوي على الأداء وسهولة الصيانة وجودة البيانات.","tr":"Performans, sürdürülebilirlik ve veri kalitesine odaklanarak güvenilir API’ler, olay güdümlü servisler, backend mimarileri, ETL hatları ve gerçek zamanlı veri sistemleri tasarlıyorum."},"t17":{"en":"Location:","ar":"الموقع:","tr":"Konum:"},"t18":{"en":"Tehran, Iran","ar":"طهران، إيران","tr":"Tahran, İran"},"t19":{"en":"Phone:","ar":"الهاتف:","tr":"Telefon:"},"t20":{"en":"GitHub:","ar":"GitHub:","tr":"GitHub:"},"t21":{"en":"Degree:","ar":"الشهادة:","tr":"Eğitim:"},"t22":{"en":"B.S. in ICT","ar":"بكالوريوس في تقنية المعلومات والاتصالات","tr":"Bilgi ve İletişim Teknolojileri Lisansı"},"t23":{"en":"Email:","ar":"البريد الإلكتروني:","tr":"E-posta:"},"t24":{"en":"Experience:","ar":"الخبرة:","tr":"Deneyim:"},"t25":{"en":"8+ years","ar":"أكثر من 8 سنوات","tr":"8+ yıl"},"t26":{"en":"My work spans financial technologies, data engineering, security platforms, and intelligent systems. I enjoy translating complex business and data requirements into clean, scalable software and collaborating with teams to raise engineering standards. Alongside software engineering, I have also worked independently in digital marketing and media, combining technology, content, audience insight, and commercial thinking to help brands strengthen their online presence.","ar":"يشمل عملي التقنيات المالية وهندسة البيانات ومنصات الأمن والأنظمة الذكية. أستمتع بتحويل متطلبات الأعمال والبيانات المعقدة إلى برمجيات نظيفة وقابلة للتوسع، والتعاون مع الفرق لرفع المعايير الهندسية. وإلى جانب هندسة البرمجيات، عملت بشكل مستقل في التسويق الرقمي والإعلام، جامعاً بين التقنية والمحتوى وفهم الجمهور والتفكير التجاري لمساعدة العلامات التجارية على تعزيز حضورها الرقمي.","tr":"Çalışmalarım finansal teknolojiler, veri mühendisliği, güvenlik platformları ve akıllı sistemleri kapsıyor. Karmaşık iş ve veri gereksinimlerini temiz ve ölçeklenebilir yazılımlara dönüştürmekten ve mühendislik standartlarını yükseltmek için ekiplerle çalışmaktan keyif alıyorum. Yazılım mühendisliğinin yanında dijital pazarlama ve medya alanında da bağımsız çalışarak markaların çevrim içi varlığını güçlendirmelerine yardımcı oldum."},"t27":{"en":"10+ Production Projects","ar":"أكثر من 10 مشاريع إنتاجية","tr":"10+ Üretim Projesi"},"t28":{"en":"successfully delivered and running in production","ar":"تم تسليمها بنجاح وتعمل في بيئة الإنتاج","tr":"başarıyla teslim edildi ve üretimde çalışıyor"},"t29":{"en":"1M+ Users Supported","ar":"دعم أكثر من مليون مستخدم","tr":"1 Milyon+ Kullanıcı"},"t30":{"en":"using live services and platforms I contributed to","ar":"عبر خدمات ومنصات حية ساهمت في بنائها","tr":"katkıda bulunduğum canlı servis ve platformlarda"},"t31":{"en":"20+ Engineers Mentored","ar":"إرشاد أكثر من 20 مهندساً","tr":"20+ Mühendise Mentorluk"},"t32":{"en":"across backend, data, infrastructure, and related fields","ar":"في مجالات الأنظمة الخلفية والبيانات والبنية التحتية","tr":"backend, veri, altyapı ve ilgili alanlarda"},"t33":{"en":"15+ Critical Scale Challenges","ar":"أكثر من 15 تحدياً حرجاً في التوسع","tr":"15+ Kritik Ölçekleme Sorunu"},"t34":{"en":"resolved through production and disaster-recovery consulting","ar":"تم حلها عبر استشارات الإنتاج والتعافي من الكوارث","tr":"üretim ve felaket kurtarma danışmanlığıyla çözüldü"},"t35":{"en":"15+ Cross-functional Teams","ar":"أكثر من 15 فريقاً متعدد التخصصات","tr":"15+ Disiplinler Arası Ekip"},"t36":{"en":"collaborated across business, data, product, and technology","ar":"تعاون بين الأعمال والبيانات والمنتج والتقنية","tr":"iş, veri, ürün ve teknoloji ekipleriyle iş birliği"},"t37":{"en":"Top 3","ar":"أفضل 3","tr":"İlk 3"},"t38":{"en":"Major Financial Portfolio Platform","ar":"منصة مالية كبرى لإدارة المحافظ","tr":"Büyük Finansal Portföy Platformu"},"t39":{"en":"implemented for one of Iran's three largest financial groups","ar":"تم تنفيذها لإحدى أكبر ثلاث مجموعات مالية في إيران","tr":"İran’ın en büyük üç finans grubundan biri için geliştirildi"},"t40":{"en":"Skills","ar":"المهارات","tr":"Yetenekler"},"t41":{"en":"Core technologies and engineering practices used across backend, data, cloud, and distributed systems projects.","ar":"التقنيات والممارسات الهندسية الأساسية المستخدمة في مشاريع الأنظمة الخلفية والبيانات والسحابة والأنظمة الموزعة.","tr":"Backend, veri, bulut ve dağıtık sistem projelerinde kullanılan temel teknolojiler ve mühendislik uygulamaları."},"t42":{"en":"Backend Engineering","ar":"هندسة الأنظمة الخلفية","tr":"Backend Mühendisliği"},"t43":{"en":"Data Engineering","ar":"هندسة البيانات","tr":"Veri Mühendisliği"},"t44":{"en":"Databases & Search","ar":"قواعد البيانات والبحث","tr":"Veritabanları ve Arama"},"t45":{"en":"Messaging & Distributed Systems","ar":"المراسلة والأنظمة الموزعة","tr":"Mesajlaşma ve Dağıtık Sistemler"},"t46":{"en":"Cloud & DevOps","ar":"السحابة وعمليات DevOps","tr":"Bulut ve DevOps"},"t47":{"en":"Quality & Observability","ar":"الجودة وقابلية المراقبة","tr":"Kalite ve Gözlemlenebilirlik"},"t48":{"en":"Resume","ar":"السيرة الذاتية","tr":"Özgeçmiş"},"t49":{"en":"Professional experience building scalable software, data, and distributed systems across finance, cybersecurity, industrial technologies and enterprise platforms.","ar":"خبرة مهنية في بناء برمجيات وأنظمة بيانات وأنظمة موزعة قابلة للتوسع في قطاعات المال والأمن السيبراني والتقنيات الصناعية ومنصات المؤسسات.","tr":"Finans, siber güvenlik, endüstriyel teknolojiler ve kurumsal platformlarda ölçeklenebilir yazılım, veri ve dağıtık sistemler geliştirme deneyimi."},"t50":{"en":"Summary","ar":"الملخص","tr":"Özet"},"t51":{"en":"Senior Software Engineer focused on scalable backend services, real-time data platforms, and collaborative engineering.","ar":"مهندس برمجيات أول يركز على خدمات الأنظمة الخلفية القابلة للتوسع، ومنصات البيانات اللحظية، والعمل الهندسي التعاوني.","tr":"Ölçeklenebilir backend servisleri, gerçek zamanlı veri platformları ve ekip çalışmasına odaklanan kıdemli yazılım mühendisi."},"t52":{"en":"Tehran, Iran","ar":"طهران، إيران","tr":"Tahran, İran"},"t53":{"en":"Education","ar":"التعليم","tr":"Eğitim"},"t54":{"en":"B.S. Information & Communications Technology","ar":"بكالوريوس في تكنولوجيا المعلومات والاتصالات","tr":"Bilgi ve İletişim Teknolojileri Lisansı"},"t55":{"en":"Shamsipour Technical and Vocational College, Tehran","ar":"كلية شمس بور التقنية والمهنية، طهران","tr":"Shamsipour Teknik ve Meslek Yüksekokulu, Tahran"},"t56":{"en":"Professional Experience","ar":"الخبرة المهنية","tr":"Profesyonel Deneyim"},"t57":{"en":"Senior Software Engineer","ar":"مهندس برمجيات أول","tr":"Kıdemli Yazılım Mühendisi"},"t58":{"en":"Nov 2025 - Present","ar":"نوفمبر 2025 - حتى الآن","tr":"Kasım 2025 - Günümüz"},"t59":{"en":"Karnameh, Tehran","ar":"كارنامه، طهران","tr":"Karnameh, Tahran"},"t60":{"en":"Senior Python Engineer, Data Systems","ar":"مهندس Python أول، أنظمة البيانات","tr":"Kıdemli Python Mühendisi, Veri Sistemleri"},"t61":{"en":"May 2023 - Oct 2025","ar":"مايو 2023 - أكتوبر 2025","tr":"Mayıs 2023 - Ekim 2025"},"t62":{"en":"Charisma Financial Group, Tehran","ar":"مجموعة كاريزما المالية، طهران","tr":"Charisma Finans Grubu, Tahran"},"t63":{"en":"Designed and delivered a portfolio management platform combining backend engineering, data engineering, and machine learning.","ar":"صممت وسلمت منصة لإدارة المحافظ تجمع بين هندسة الأنظمة الخلفية وهندسة البيانات والتعلم الآلي.","tr":"Backend mühendisliği, veri mühendisliği ve makine öğrenimini birleştiren bir portföy yönetim platformu tasarlayıp teslim ettim."},"t64":{"en":"Built scalable Airflow ETL pipelines powering organization-wide data workflows and analytics.","ar":"بنيت مسارات ETL قابلة للتوسع باستخدام Airflow لدعم تدفقات البيانات والتحليلات على مستوى المؤسسة.","tr":"Kurum genelindeki veri akışlarını ve analizleri destekleyen ölçeklenebilir Airflow ETL hatları kurdum."},"t65":{"en":"Developed FastAPI and Plotly Dash applications for monitoring investment predictions and model performance.","ar":"طورت تطبيقات FastAPI وPlotly Dash لمراقبة توقعات الاستثمار وأداء النماذج.","tr":"Yatırım tahminlerini ve model performansını izlemek için FastAPI ve Plotly Dash uygulamaları geliştirdim."},"t66":{"en":"Improved legacy PostgreSQL performance by 80% through partitioning and query optimization.","ar":"حسّنت أداء PostgreSQL القديم بنسبة 80٪ عبر التقسيم وتحسين الاستعلامات.","tr":"Bölümleme ve sorgu optimizasyonuyla eski PostgreSQL sisteminin performansını %80 artırdım."},"t67":{"en":"Scaled real-time processing for more than one million customer profiles.","ar":"وسّعت المعالجة اللحظية لأكثر من مليون ملف عميل.","tr":"Bir milyondan fazla müşteri profili için gerçek zamanlı işlemeyi ölçeklendirdim."},"t68":{"en":"Implemented PostgreSQL-to-Kafka CDC pipelines and managed data processing for 1,400+ Tehran Stock Exchange tickers.","ar":"نفذت مسارات CDC من PostgreSQL إلى Kafka وأدرت معالجة بيانات أكثر من 1400 رمز في بورصة طهران.","tr":"PostgreSQL’den Kafka’ya CDC hatları kurdum ve Tahran Borsası’ndaki 1.400’den fazla sembolün veri işlemesini yönettim."},"t69":{"en":"Performed regular code reviews and established maintainable engineering standards across the team.","ar":"أجريت مراجعات دورية للكود ورسخت معايير هندسية قابلة للصيانة داخل الفريق.","tr":"Düzenli kod incelemeleri yaptım ve ekip genelinde sürdürülebilir mühendislik standartları oluşturdum."},"t70":{"en":"Back-end Developer","ar":"مطوّر أنظمة خلفية","tr":"Backend Geliştirici"},"t71":{"en":"Feb 2022 - May 2023","ar":"فبراير 2022 - مايو 2023","tr":"Şubat 2022 - Mayıs 2023"},"t72":{"en":"Bithome, Tehran","ar":"بيت هوم، طهران","tr":"Bithome, Tahran"},"t73":{"en":"Contributed to a new backend architecture as part of a 5-member Agile engineering team.","ar":"ساهمت في بنية خلفية جديدة ضمن فريق هندسي رشيق من خمسة أعضاء.","tr":"Beş kişilik Agile mühendislik ekibinde yeni backend mimarisine katkıda bulundum."},"t74":{"en":"Improved API responsiveness by 63% using Celery and Redis asynchronous background processing.","ar":"حسّنت استجابة واجهات API بنسبة 63٪ باستخدام المعالجة غير المتزامنة عبر Celery وRedis.","tr":"Celery ve Redis ile eşzamansız arka plan işleme kullanarak API yanıt hızını %63 artırdım."},"t75":{"en":"Rebuilt the back-office platform with Django, reducing customer response time by 50%.","ar":"أعدت بناء منصة الإدارة باستخدام Django، مما خفّض زمن الاستجابة للعملاء بنسبة 50٪.","tr":"Back-office platformunu Django ile yeniden kurarak müşteri yanıt süresini %50 azalttım."},"t76":{"en":"Expanded automated testing, reducing customer complaints by 23% while improving product quality.","ar":"وسعت الاختبارات الآلية، فخفضت شكاوى العملاء بنسبة 23٪ مع تحسين جودة المنتج.","tr":"Otomatik test kapsamını genişleterek müşteri şikâyetlerini %23 azalttım ve ürün kalitesini yükselttim."},"t77":{"en":"Built Sentry monitoring dashboards for faster issue detection and debugging.","ar":"أنشأت لوحات مراقبة عبر Sentry لتسريع اكتشاف المشكلات وتصحيحها.","tr":"Sorunları daha hızlı tespit etmek ve ayıklamak için Sentry izleme panoları oluşturdum."},"t78":{"en":"Optimized database queries, increasing overall application performance by 25%.","ar":"حسّنت استعلامات قاعدة البيانات، فرفعت أداء التطبيق الإجمالي بنسبة 25٪.","tr":"Veritabanı sorgularını optimize ederek genel uygulama performansını %25 artırdım."},"t79":{"en":"Back-end Developer","ar":"مطوّر أنظمة خلفية","tr":"Backend Geliştirici"},"t80":{"en":"Jun 2020 - Feb 2022","ar":"يونيو 2020 - فبراير 2022","tr":"Haziran 2020 - Şubat 2022"},"t81":{"en":"Andisheh Negar Pars, Tehran","ar":"أنديشه نگار پارس، طهران","tr":"Andisheh Negar Pars, Tahran"},"t82":{"en":"Developed core components of a SIEM platform managing over 1,000 enterprise clients.","ar":"طورت المكونات الأساسية لمنصة SIEM تدير أكثر من 1000 عميل مؤسسي.","tr":"1.000’den fazla kurumsal müşteriyi yöneten bir SIEM platformunun temel bileşenlerini geliştirdim."},"t83":{"en":"Implemented secure WebSocket communication using AES-128 encryption.","ar":"نفذت اتصال WebSocket آمناً باستخدام تشفير AES-128.","tr":"AES-128 şifreleme kullanarak güvenli WebSocket iletişimi gerçekleştirdim."},"t84":{"en":"Introduced Celery, Redis, Docker, and Nginx for scalable asynchronous processing and deployment.","ar":"أدخلت Celery وRedis وDocker وNginx للمعالجة غير المتزامنة والنشر القابلين للتوسع.","tr":"Ölçeklenebilir eşzamansız işleme ve dağıtım için Celery, Redis, Docker ve Nginx kullandım."},"t85":{"en":"Participated in designing and implementing a microservices architecture, improving engineering efficiency by 40%.","ar":"شاركت في تصميم وتنفيذ بنية خدمات مصغّرة، مما حسّن الكفاءة الهندسية بنسبة 40٪.","tr":"Mikroservis mimarisinin tasarım ve uygulamasına katılarak mühendislik verimliliğini %40 artırdım."},"t86":{"en":"Dockerized projects and documented deployment processes to streamline onboarding.","ar":"حوّلت المشاريع إلى حاويات Docker ووثقت عمليات النشر لتسهيل انضمام المطورين.","tr":"Projeleri Docker’a taşıdım ve işe alım sürecini kolaylaştırmak için dağıtım süreçlerini belgeledim."},"t87":{"en":"Integrated Elasticsearch, Logstash, and ElastAlert for centralized log analysis and real-time alerting.","ar":"دمجت Elasticsearch وLogstash وElastAlert لتحليل السجلات مركزياً والتنبيه اللحظي.","tr":"Merkezi log analizi ve gerçek zamanlı uyarılar için Elasticsearch, Logstash ve ElastAlert entegrasyonu yaptım."},"t88":{"en":"Software Developer","ar":"مطوّر برمجيات","tr":"Yazılım Geliştirici"},"t89":{"en":"Nov 2017 - Jun 2020","ar":"نوفمبر 2017 - يونيو 2020","tr":"Kasım 2017 - Haziran 2020"},"t90":{"en":"PFK, Tehran","ar":"PFK، طهران","tr":"PFK, Tahran"},"t91":{"en":"Developed and maintained Java-based firmware for intelligent transportation cameras.","ar":"طورت وصنت برمجيات ثابتة بلغة Java لكاميرات النقل الذكية.","tr":"Akıllı ulaşım kameraları için Java tabanlı firmware geliştirdim ve bakımını yaptım."},"t92":{"en":"Built Python software supporting real-time camera operations across 28 cities.","ar":"بنيت برمجيات Python تدعم تشغيل الكاميرات لحظياً في 28 مدينة.","tr":"28 şehirde gerçek zamanlı kamera operasyonlarını destekleyen Python yazılımı geliştirdim."},"t93":{"en":"Optimized MySQL databases to improve processing performance and system reliability.","ar":"حسّنت قواعد بيانات MySQL لرفع أداء المعالجة وموثوقية النظام.","tr":"İşleme performansını ve sistem güvenilirliğini artırmak için MySQL veritabanlarını optimize ettim."},"t94":{"en":"Managed ITS/ETC databases and server infrastructure across multiple data centers.","ar":"أدرت قواعد بيانات ITS/ETC وبنية الخوادم في عدة مراكز بيانات.","tr":"Birden fazla veri merkezindeki ITS/ETC veritabanlarını ve sunucu altyapısını yönettim."},"t95":{"en":"Key Achievements","ar":"أبرز الإنجازات","tr":"Önemli Başarılar"},"t96":{"en":"Selected engineering contributions across finance, cybersecurity, enterprise software, industrial systems, and large-scale distributed platforms.","ar":"مساهمات هندسية مختارة في التمويل والأمن السيبراني وبرمجيات المؤسسات والأنظمة الصناعية والمنصات الموزعة واسعة النطاق.","tr":"Finans, siber güvenlik, kurumsal yazılım, endüstriyel sistemler ve büyük ölçekli dağıtık platformlardaki seçili mühendislik katkıları."},"t97":{"en":"Scalable Distributed Systems","ar":"أنظمة موزعة قابلة للتوسع","tr":"Ölçeklenebilir Dağıtık Sistemler"},"t98":{"en":"Designed and delivered scalable backend architectures capable of supporting high-volume production workloads and mission-critical business services.","ar":"صممت وسلمت بُنى خلفية قابلة للتوسع تدعم أحمال إنتاج كبيرة وخدمات أعمال بالغة الأهمية.","tr":"Yüksek hacimli üretim yüklerini ve kritik iş servislerini destekleyen ölçeklenebilir backend mimarileri tasarlayıp teslim ettim."},"t99":{"en":"Performance Engineering","ar":"هندسة الأداء","tr":"Performans Mühendisliği"},"t100":{"en":"Optimized databases, APIs, caching layers, asynchronous processing, and distributed services to improve overall system performance.","ar":"حسّنت قواعد البيانات وواجهات API وطبقات التخزين المؤقت والمعالجة غير المتزامنة والخدمات الموزعة لرفع الأداء العام.","tr":"Genel sistem performansını artırmak için veritabanlarını, API’leri, önbellek katmanlarını, eşzamansız işlemleri ve dağıtık servisleri optimize ettim."},"t101":{"en":"Production Reliability","ar":"موثوقية بيئة الإنتاج","tr":"Üretim Güvenilirliği"},"t102":{"en":"Solved complex production incidents and improved system resilience, availability, monitoring, and operational stability.","ar":"حللت حوادث إنتاج معقدة وحسّنت مرونة النظام وتوافره ومراقبته واستقراره التشغيلي.","tr":"Karmaşık üretim sorunlarını çözdüm; sistem dayanıklılığını, erişilebilirliğini, izlenebilirliğini ve operasyonel kararlılığını geliştirdim."},"t103":{"en":"Enterprise Financial Platforms","ar":"المنصات المالية المؤسسية","tr":"Kurumsal Finans Platformları"},"t104":{"en":"Delivered software solutions for large financial organizations, supporting critical business operations and portfolio management.","ar":"قدمت حلولاً برمجية لمؤسسات مالية كبيرة تدعم العمليات الحيوية وإدارة المحافظ.","tr":"Büyük finans kuruluşları için kritik iş operasyonlarını ve portföy yönetimini destekleyen yazılım çözümleri sundum."},"t105":{"en":"Technical Leadership","ar":"القيادة التقنية","tr":"Teknik Liderlik"},"t106":{"en":"Mentored engineers, collaborated with cross-functional teams, and contributed to software architecture and engineering best practices.","ar":"أرشدت المهندسين وتعاونت مع فرق متعددة التخصصات وساهمت في هندسة البرمجيات وأفضل الممارسات.","tr":"Mühendislere mentorluk yaptım, disiplinler arası ekiplerle çalıştım ve yazılım mimarisi ile mühendislik en iyi uygulamalarına katkıda bulundum."},"t107":{"en":"Business Impact","ar":"الأثر التجاري","tr":"İş Etkisi"},"t108":{"en":"Built reliable software products that improved customer experience, accelerated delivery, and supported business growth at scale.","ar":"بنيت منتجات برمجية موثوقة حسّنت تجربة العملاء وسرّعت التسليم ودعمت نمو الأعمال على نطاق واسع.","tr":"Müşteri deneyimini iyileştiren, teslimatı hızlandıran ve büyük ölçekte iş büyümesini destekleyen güvenilir yazılım ürünleri geliştirdim."},"t109":{"en":"Areas of Expertise","ar":"مجالات الخبرة","tr":"Uzmanlık Alanları"},"t110":{"en":"Engineering capabilities for teams building dependable, scalable, and data-intensive products.","ar":"قدرات هندسية للفرق التي تبني منتجات موثوقة وقابلة للتوسع وكثيفة البيانات.","tr":"Güvenilir, ölçeklenebilir ve veri yoğun ürünler geliştiren ekipler için mühendislik yetkinlikleri."},"t111":{"en":"Backend Architecture","ar":"هندسة الأنظمة الخلفية","tr":"Backend Mimarisi"},"t112":{"en":"Scalable APIs and services using Python, FastAPI, Django, Flask, and event-driven patterns.","ar":"واجهات API وخدمات قابلة للتوسع باستخدام Python وFastAPI وDjango وFlask والأنماط القائمة على الأحداث.","tr":"Python, FastAPI, Django, Flask ve olay güdümlü desenlerle ölçeklenebilir API ve servisler."},"t113":{"en":"Data Engineering","ar":"هندسة البيانات","tr":"Veri Mühendisliği"},"t114":{"en":"ETL, CDC, data modeling, Airflow orchestration, and reliable batch and real-time pipelines.","ar":"ETL وCDC ونمذجة البيانات وتنسيق Airflow ومسارات موثوقة للمعالجة الدفعية واللحظية.","tr":"ETL, CDC, veri modelleme, Airflow orkestrasyonu ve güvenilir toplu/gerçek zamanlı veri hatları."},"t115":{"en":"Distributed Systems","ar":"الأنظمة الموزعة","tr":"Dağıtık Sistemler"},"t116":{"en":"Kafka, RabbitMQ, Redis, Celery, microservices, and fault-aware system design.","ar":"Kafka وRabbitMQ وRedis وCelery والخدمات المصغّرة وتصميم أنظمة واعٍ بالأعطال.","tr":"Kafka, RabbitMQ, Redis, Celery, mikroservisler ve hata toleranslı sistem tasarımı."},"t117":{"en":"Cloud & DevOps","ar":"السحابة وعمليات DevOps","tr":"Bulut ve DevOps"},"t118":{"en":"Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP, and Nginx.","ar":"Docker وKubernetes وTerraform وCI/CD وLinux وAWS وAzure وGCP وNginx.","tr":"Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP ve Nginx."},"t119":{"en":"Performance & Reliability","ar":"الأداء والموثوقية","tr":"Performans ve Güvenilirlik"},"t120":{"en":"Database tuning, profiling, automated tests, observability, Sentry, Grafana, and logging.","ar":"ضبط قواعد البيانات وتحليل الأداء والاختبارات الآلية وقابلية المراقبة وSentry وGrafana والسجلات.","tr":"Veritabanı ayarlama, profilleme, otomatik testler, gözlemlenebilirlik, Sentry, Grafana ve loglama."},"t121":{"en":"Engineering Collaboration","ar":"التعاون الهندسي","tr":"Mühendislik İş Birliği"},"t122":{"en":"Code reviews, standards, documentation, Agile delivery, and maintainable software design.","ar":"مراجعة الكود والمعايير والتوثيق والتسليم الرشيق وتصميم برمجيات قابلة للصيانة.","tr":"Kod incelemeleri, standartlar, dokümantasyon, Agile teslimat ve sürdürülebilir yazılım tasarımı."},"t123":{"en":"Freelance Digital Marketing & Media","ar":"التسويق الرقمي والإعلام الحر","tr":"Freelance Dijital Pazarlama ve Medya"},"t124":{"en":"Freelance experience helping businesses and personal brands improve their digital presence through Meta advertising, social media strategy, content creation, media production, and performance-focused consulting.","ar":"خبرة مستقلة في مساعدة الشركات والعلامات الشخصية على تحسين حضورها الرقمي عبر إعلانات ميتا واستراتيجية التواصل الاجتماعي وصناعة المحتوى والإنتاج الإعلامي والاستشارات القائمة على الأداء.","tr":"İşletmelerin ve kişisel markaların Meta reklamları, sosyal medya stratejisi, içerik üretimi, medya prodüksiyonu ve performans odaklı danışmanlıkla dijital varlıklarını geliştirmelerine yardımcı olduğum freelance deneyim."},"t125":{"en":"Meta Advertising","ar":"إعلانات ميتا","tr":"Meta Reklamcılığı"},"t126":{"en":"Planning and managing Facebook and Instagram advertising campaigns, including campaign structure, audience targeting, creative direction, testing, and performance optimization.","ar":"تخطيط وإدارة حملات إعلانية على Facebook وInstagram، بما يشمل هيكلة الحملة واستهداف الجمهور والتوجيه الإبداعي والاختبار وتحسين الأداء.","tr":"Kampanya yapısı, hedef kitle seçimi, kreatif yönlendirme, test ve performans optimizasyonu dahil Facebook ve Instagram reklam kampanyalarını planlama ve yönetme."},"t127":{"en":"Social Media Strategy","ar":"استراتيجية التواصل الاجتماعي","tr":"Sosyal Medya Stratejisi"},"t128":{"en":"Developing practical social media strategies focused on brand awareness, audience growth, engagement, customer acquisition, and consistent digital communication.","ar":"تطوير استراتيجيات عملية للتواصل الاجتماعي تركز على الوعي بالعلامة ونمو الجمهور والتفاعل واكتساب العملاء والتواصل الرقمي المتسق.","tr":"Marka bilinirliği, kitle büyümesi, etkileşim, müşteri kazanımı ve tutarlı dijital iletişime odaklanan uygulanabilir sosyal medya stratejileri geliştirme."},"t129":{"en":"Performance Marketing","ar":"تسويق الأداء","tr":"Performans Pazarlaması"},"t130":{"en":"Using campaign analytics, audience insights, conversion signals, and continuous experimentation to improve advertising efficiency and measurable business outcomes.","ar":"استخدام تحليلات الحملات وفهم الجمهور وإشارات التحويل والتجارب المستمرة لتحسين كفاءة الإعلان ونتائج الأعمال القابلة للقياس.","tr":"Reklam verimliliğini ve ölçülebilir iş sonuçlarını artırmak için kampanya analitiği, kitle içgörüleri, dönüşüm sinyalleri ve sürekli deneylerden yararlanma."},"t131":{"en":"Content & Media Production","ar":"إنتاج المحتوى والإعلام","tr":"İçerik ve Medya Üretimi"},"t132":{"en":"Creating photography, videography, promotional videos, campaign assets, and multimedia content designed for social platforms and digital brand communication.","ar":"إنتاج الصور والفيديوهات الترويجية ومواد الحملات والمحتوى متعدد الوسائط المصمم للمنصات الاجتماعية والتواصل الرقمي للعلامة.","tr":"Sosyal platformlar ve dijital marka iletişimi için fotoğraf, video, tanıtım filmi, kampanya materyali ve multimedya içerik üretme."},"t133":{"en":"Brand & Content Consulting","ar":"استشارات العلامة التجارية والمحتوى","tr":"Marka ve İçerik Danışmanlığı"},"t134":{"en":"Advising clients on brand positioning, messaging, content planning, digital communication, and practical ways to build a stronger and more coherent online identity.","ar":"تقديم المشورة للعملاء حول تموضع العلامة والرسائل وتخطيط المحتوى والتواصل الرقمي والطرق العملية لبناء هوية إلكترونية أقوى وأكثر اتساقاً.","tr":"Müşterilere marka konumlandırma, mesajlaşma, içerik planlama, dijital iletişim ve daha güçlü bir çevrim içi kimlik oluşturma konusunda danışmanlık verme."},"t135":{"en":"Technology-Driven Growth","ar":"نمو مدفوع بالتقنية","tr":"Teknoloji Odaklı Büyüme"},"t136":{"en":"Combining software engineering, data, automation, and marketing knowledge to connect technical decisions with customer experience and business growth.","ar":"دمج هندسة البرمجيات والبيانات والأتمتة والتسويق لربط القرارات التقنية بتجربة العميل ونمو الأعمال.","tr":"Teknik kararları müşteri deneyimi ve iş büyümesiyle ilişkilendirmek için yazılım mühendisliği, veri, otomasyon ve pazarlama bilgisini birleştirme."},"t137":{"en":"Freelance Capabilities","ar":"قدرات العمل الحر","tr":"Freelance Yetkinlikler"},"t138":{"en":"Meta Ads, Facebook and Instagram campaign management, social media marketing, performance marketing, content strategy, audience targeting, campaign analytics, media production, photography, videography, brand positioning, and digital communication.","ar":"إعلانات ميتا، إدارة حملات Facebook وInstagram، التسويق عبر التواصل الاجتماعي، تسويق الأداء، استراتيجية المحتوى، استهداف الجمهور، تحليلات الحملات، الإنتاج الإعلامي، التصوير، الفيديو، تموضع العلامة، والتواصل الرقمي.","tr":"Meta Ads, Facebook ve Instagram kampanya yönetimi, sosyal medya pazarlaması, performans pazarlaması, içerik stratejisi, kitle hedefleme, kampanya analitiği, medya prodüksiyonu, fotoğraf, video, marka konumlandırma ve dijital iletişim."},"t139":{"en":"Professional Interests","ar":"الاهتمامات المهنية","tr":"Profesyonel İlgi Alanları"},"t140":{"en":"I am interested in the intersection of software engineering, data, artificial intelligence, digital marketing, media, branding, and consumer behavior—especially products that use technology and audience insight to create measurable business value.","ar":"أهتم بالتقاطع بين هندسة البرمجيات والبيانات والذكاء الاصطناعي والتسويق الرقمي والإعلام والعلامات التجارية وسلوك المستهلك، خصوصاً المنتجات التي تستخدم التقنية وفهم الجمهور لصناعة قيمة تجارية قابلة للقياس.","tr":"Yazılım mühendisliği, veri, yapay zekâ, dijital pazarlama, medya, markalaşma ve tüketici davranışının kesişimiyle; özellikle teknoloji ve kitle içgörüsünü ölçülebilir iş değerine dönüştüren ürünlerle ilgileniyorum."},"t141":{"en":"Freelance Digital Marketing & Media Consultant","ar":"مستشار مستقل للتسويق الرقمي والإعلام","tr":"Freelance Dijital Pazarlama ve Medya Danışmanı"},"t142":{"en":"Freelance","ar":"عمل حر","tr":"Freelance"},"t143":{"en":"Self-employed · Remote","ar":"عمل مستقل · عن بُعد","tr":"Serbest çalışan · Uzaktan"},"t144":{"en":"Planned and managed Meta Ads campaigns for businesses and personal brands across Facebook and Instagram.","ar":"خططت وأدرت حملات إعلانات ميتا للشركات والعلامات الشخصية عبر Facebook وInstagram.","tr":"İşletmeler ve kişisel markalar için Facebook ve Instagram’da Meta Ads kampanyaları planlayıp yönettim."},"t145":{"en":"Developed social media strategies for brand awareness, audience growth, engagement, and customer acquisition.","ar":"طورت استراتيجيات تواصل اجتماعي للوعي بالعلامة ونمو الجمهور والتفاعل واكتساب العملاء.","tr":"Marka bilinirliği, kitle büyümesi, etkileşim ve müşteri kazanımı için sosyal medya stratejileri geliştirdim."},"t146":{"en":"Produced marketing content including photography, videography, promotional videos, and digital media assets.","ar":"أنتجت محتوى تسويقياً يشمل التصوير والفيديوهات الترويجية ومواد الإعلام الرقمي.","tr":"Fotoğraf, video, tanıtım filmleri ve dijital medya materyalleri dahil pazarlama içerikleri ürettim."},"t147":{"en":"Improved campaign performance through audience targeting, analytics, testing, and ongoing optimization.","ar":"حسّنت أداء الحملات عبر استهداف الجمهور والتحليلات والاختبار والتحسين المستمر.","tr":"Hedef kitle seçimi, analiz, test ve sürekli optimizasyonla kampanya performansını artırdım."},"t148":{"en":"Consulted clients on branding, content planning, digital communication, and online business growth.","ar":"قدمت استشارات للعملاء في بناء العلامة وتخطيط المحتوى والتواصل الرقمي ونمو الأعمال عبر الإنترنت.","tr":"Müşterilere markalaşma, içerik planlama, dijital iletişim ve çevrim içi iş büyümesi konularında danışmanlık verdim."},"t149":{"en":"Combined marketing expertise with technical knowledge to help clients make stronger digital and data-informed decisions.","ar":"جمعت الخبرة التسويقية مع المعرفة التقنية لمساعدة العملاء على اتخاذ قرارات رقمية أقوى قائمة على البيانات.","tr":"Müşterilerin daha güçlü, veriye dayalı dijital kararlar almasına yardımcı olmak için pazarlama uzmanlığını teknik bilgiyle birleştirdim."},"t150":{"en":"Recommendations","ar":"التوصيات","tr":"Referanslar"},"t151":{"en":"Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.","ar":"آراء قادة الهندسة والمديرين والمرشدين والزملاء الذين عملوا معي مباشرة.","tr":"Benimle doğrudan çalışmış mühendislik liderleri, yöneticiler, mentorlar ve ekip arkadaşlarının görüşleri."},"t152":{"en":"Chief Technology Officer at Karnameh","ar":"مدير التقنية في كارنامه","tr":"Karnameh Teknoloji Direktörü"},"t153":{"en":"Direct manager · June 16, 2026","ar":"المدير المباشر · 16 يونيو 2026","tr":"Doğrudan yönetici · 16 Haziran 2026"},"t154":{"en":"Purya consistently demonstrated strong engineering capabilities, excellent problem-solving skills, and a solid understanding of scalable software systems. He worked effectively with product owners and cross-functional teams, improved system performance, delivered reliably, and contributed positively to increasing our team's delivery speed. I would confidently recommend him.","ar":"أظهر پوریا باستمرار قدرات هندسية قوية ومهارات ممتازة في حل المشكلات وفهماً متيناً للأنظمة البرمجية القابلة للتوسع. عمل بفاعلية مع مالكي المنتجات والفرق متعددة التخصصات، وحسّن أداء الأنظمة، والتزم بالتسليم، وأسهم في زيادة سرعة إنجاز الفريق. أوصي به بكل ثقة.","tr":"Purya sürekli olarak güçlü mühendislik yetkinlikleri, mükemmel problem çözme becerileri ve ölçeklenebilir yazılım sistemleri konusunda sağlam bir anlayış sergiledi. Ürün sahipleri ve farklı disiplinlerden ekiplerle etkili çalıştı, sistem performansını geliştirdi, güvenilir teslimatlar yaptı ve ekibimizin teslimat hızının artmasına olumlu katkı sağladı. Kendisini gönül rahatlığıyla tavsiye ederim."},"t155":{"en":"Machine Learning Engineer","ar":"مهندس تعلم آلي","tr":"Makine Öğrenimi Mühendisi"},"t156":{"en":"Direct manager · January 7, 2026","ar":"المدير المباشر · 7 يناير 2026","tr":"Doğrudan yönetici · 7 Ocak 2026"},"t157":{"en":"Purya is a strong and reliable backend developer with excellent experience in FastAPI, SQL databases, Kafka, Redis, and other backend technologies. He consistently delivered clean, well-structured code with clear documentation and showed strong problem-solving skills, creativity, ownership, and teamwork.","ar":"پوریا مطور أنظمة خلفية قوي وموثوق، ويتمتع بخبرة ممتازة في FastAPI وقواعد بيانات SQL وKafka وRedis وغيرها من تقنيات الأنظمة الخلفية. كان يسلّم باستمرار كوداً نظيفاً ومنظماً مع توثيق واضح، وأظهر مهارات قوية في حل المشكلات والإبداع وتحمل المسؤولية والعمل الجماعي.","tr":"Purya; FastAPI, SQL veritabanları, Kafka, Redis ve diğer backend teknolojilerinde çok iyi deneyime sahip güçlü ve güvenilir bir backend geliştiricisidir. Açık dokümantasyonla temiz ve iyi yapılandırılmış kodlar teslim etti; problem çözme, yaratıcılık, sorumluluk alma ve ekip çalışması konularında güçlü beceriler gösterdi."},"t158":{"en":"Software Engineer & Technical Lead","ar":"مهندس برمجيات وقائد تقني","tr":"Yazılım Mühendisi ve Teknik Lider"},"t159":{"en":"Senior colleague · November 25, 2023","ar":"زميل أقدم · 25 نوفمبر 2023","tr":"Kıdemli çalışma arkadaşı · 25 Kasım 2023"},"t160":{"en":"Purya's Python expertise was instrumental in transforming the BitHome management panel within a remarkably short timeframe. His ability to navigate complex tasks with precision and efficiency is commendable. He was consistently reliable when trusted with critical tasks and delivered exceptional results.","ar":"كانت خبرة پوریا في Python عاملاً أساسياً في تطوير لوحة إدارة BitHome خلال مدة قصيرة بشكل لافت. قدرته على التعامل مع المهام المعقدة بدقة وكفاءة جديرة بالتقدير. كان موثوقاً دائماً عند إسناد المهام الحرجة إليه وحقق نتائج استثنائية.","tr":"Purya'nın Python uzmanlığı, BitHome yönetim panelinin dikkat çekici derecede kısa bir sürede dönüştürülmesinde belirleyici oldu. Karmaşık görevleri hassasiyet ve verimlilikle yönetme becerisi takdire değerdi. Kritik görevlerde her zaman güvenilir davrandı ve olağanüstü sonuçlar üretti."},"t161":{"en":"Chief Information Security Officer","ar":"مدير أمن المعلومات","tr":"Bilgi Güvenliği Direktörü"},"t162":{"en":"Direct manager · August 21, 2022","ar":"المدير المباشر · 21 أغسطس 2022","tr":"Doğrudan yönetici · 21 Ağustos 2022"},"t163":{"en":"We hired Purya as a Python developer to implement our security client/server agent. During our work together, he consistently studied and researched new technologies, remained eager to learn, and knew how to support his colleagues.","ar":"وظفنا پوریا كمطور Python لتنفيذ عميل وخادم الأمان الخاص بنا. خلال عملنا معاً، واصل دراسة التقنيات الجديدة والبحث فيها، وحافظ على شغفه بالتعلم، وكان يعرف كيف يدعم زملاءه.","tr":"Purya'yı güvenlik istemci/sunucu ajanımızı geliştirmek üzere Python geliştiricisi olarak işe aldık. Birlikte çalıştığımız dönemde yeni teknolojileri sürekli araştırdı, öğrenme isteğini korudu ve çalışma arkadaşlarına nasıl destek olacağını iyi biliyordu."},"t164":{"en":"SIEM Engineer","ar":"مهندس SIEM","tr":"SIEM Mühendisi"},"t165":{"en":"Teammate · August 21, 2022","ar":"زميل فريق · 21 أغسطس 2022","tr":"Takım arkadaşı · 21 Ağustos 2022"},"t166":{"en":"Purya is proactive, result-oriented, responsible, and technically sound. He is always ready to put in the energy and time needed to get the job done. He is a great developer and has my full recommendation.","ar":"پوریا مبادر ويركز على النتائج ويتحمل المسؤولية ويتمتع بكفاءة تقنية قوية. وهو مستعد دائماً لبذل الوقت والجهد اللازمين لإنجاز العمل. إنه مطور ممتاز وأوصي به بالكامل.","tr":"Purya proaktif, sonuç odaklı, sorumluluk sahibi ve teknik açıdan güçlüdür. İşin tamamlanması için gereken zamanı ve enerjiyi ayırmaya her zaman hazırdır. Çok iyi bir geliştiricidir ve kendisini kesinlikle tavsiye ederim."},"t167":{"en":"DevOps Engineer at Sotoon","ar":"مهندس DevOps في ستون","tr":"Sotoon’da DevOps Mühendisi"},"t168":{"en":"Teammate · August 18, 2022","ar":"زميل فريق · 18 أغسطس 2022","tr":"Takım arkadaşı · 18 Ağustos 2022"},"t169":{"en":"Purya always put in his best effort to make the business successful. He has a strong determination to learn and improve his skills continuously. Any company would be lucky to have him as an employee.","ar":"كان پوریا يبذل دائماً أفضل ما لديه لنجاح العمل. لديه إصرار قوي على التعلم وتطوير مهاراته باستمرار، وأي شركة ستكون محظوظة بانضمامه إليها.","tr":"Purya işin başarılı olması için her zaman elinden gelenin en iyisini yaptı. Öğrenme ve becerilerini sürekli geliştirme konusunda güçlü bir kararlılığa sahiptir. Her şirket onu çalışanı olarak bünyesinde bulundurduğu için şanslı olur."},"t170":{"en":"Database Engineer","ar":"مهندس قواعد بيانات","tr":"Veritabanı Mühendisi"},"t171":{"en":"Teammate · August 17, 2022","ar":"زميل فريق · 17 أغسطس 2022","tr":"Takım arkadaşı · 17 Ağustos 2022"},"t172":{"en":"Purya is a hard-working professional and talented developer. I admire his accuracy and clean coding. Perseverance, technical knowledge, and problem-solving are among his standout qualities, especially during high-pressure tasks.","ar":"پوریا محترف مجتهد ومطور موهوب. أقدّر دقته وكتابته النظيفة للكود. المثابرة والمعرفة التقنية وحل المشكلات من أبرز صفاته، خصوصاً في المهام ذات الضغط العالي.","tr":"Purya çalışkan bir profesyonel ve yetenekli bir geliştiricidir. Hassasiyetine ve temiz kod yazmasına hayranım. Özellikle yüksek baskı altındaki görevlerde azmi, teknik bilgisi ve problem çözme becerisi öne çıkar."},"t173":{"en":"Former Teammate","ar":"زميل سابق","tr":"Eski Takım Arkadaşı"},"t174":{"en":"Teammate · August 16, 2022","ar":"زميل فريق · 16 أغسطس 2022","tr":"Takım arkadaşı · 16 Ağustos 2022"},"t175":{"en":"Purya is very good with people and has the ability to maximize their potential. He was committed, focused on delivering on time, and consistently performed at a high level while inspiring the team to do its best.","ar":"پوریا بارع في التعامل مع الناس ولديه قدرة على إبراز أفضل إمكاناتهم. كان ملتزماً ويركز على التسليم في الموعد، ويحافظ على أداء مرتفع مع تحفيز الفريق لتقديم أفضل ما لديه.","tr":"Purya insan ilişkilerinde çok iyidir ve insanların potansiyelini en üst düzeye çıkarabilir. Taahhütlerine bağlıydı, zamanında teslimata odaklandı ve ekibi en iyisini yapmaya teşvik ederken sürekli yüksek performans gösterdi."},"t176":{"en":"C++ Developer","ar":"مطوّر C++","tr":"C++ Geliştiricisi"},"t177":{"en":"Teammate · August 16, 2022","ar":"زميل فريق · 16 أغسطس 2022","tr":"Takım arkadaşı · 16 Ağustos 2022"},"t178":{"en":"Purya communicates well with people and clients, supports colleagues, and gets things done. He keeps everyone aligned around the main goal, and his assistance made a meaningful impact on our success.","ar":"يتواصل پوریا جيداً مع الأشخاص والعملاء، ويدعم زملاءه وينجز المهام. يحافظ على توافق الجميع حول الهدف الرئيسي، وكان لدعمه أثر ملموس في نجاحنا.","tr":"Purya insanlarla ve müşterilerle iyi iletişim kurar, çalışma arkadaşlarını destekler ve işleri sonuçlandırır. Herkesi ana hedef etrafında uyumlu tutar; desteği başarımız üzerinde anlamlı bir etki yarattı."},"t179":{"en":"Security Architect & Engineer","ar":"مهندس ومعماري أمن","tr":"Güvenlik Mimarı ve Mühendisi"},"t180":{"en":"Direct manager · August 16, 2022","ar":"المدير المباشر · 16 أغسطس 2022","tr":"Doğrudan yönetici · 16 Ağustos 2022"},"t181":{"en":"Purya is passionate about writing code and solving problems through creative and innovative software. He contributes ideas, respects leadership, tackles assignments enthusiastically, and is well-liked by clients and respected by coworkers.","ar":"پوریا شغوف بكتابة الكود وحل المشكلات عبر برمجيات إبداعية ومبتكرة. يشارك بالأفكار ويحترم القيادة ويتعامل مع المهام بحماس، ويحظى بتقدير العملاء واحترام زملائه.","tr":"Purya kod yazmaya ve yaratıcı, yenilikçi yazılımlarla problem çözmeye tutkuyla bağlıdır. Fikirleriyle katkı sağlar, yönetime saygı duyar, görevleri heyecanla üstlenir; müşteriler tarafından sevilir ve çalışma arkadaşları tarafından saygı görür."},"t182":{"en":"View Recommendations on LinkedIn","ar":"عرض التوصيات على LinkedIn","tr":"LinkedIn Referanslarını Gör"},"t183":{"en":"Contact","ar":"تواصل معي","tr":"İletişim"},"t184":{"en":"Open to senior backend, Python, data engineering, and distributed-systems opportunities.","ar":"متاح لفرص متقدمة في الأنظمة الخلفية وPython وهندسة البيانات والأنظمة الموزعة.","tr":"Kıdemli backend, Python, veri mühendisliği ve dağıtık sistem fırsatlarına açığım."},"t185":{"en":"Location","ar":"الموقع","tr":"Konum"},"t186":{"en":"Tehran, Iran","ar":"طهران، إيران","tr":"Tahran, İran"},"t187":{"en":"Phone","ar":"الهاتف","tr":"Telefon"},"t188":{"en":"Email","ar":"البريد الإلكتروني","tr":"E-posta"},"t189":{"en":"Copyright","ar":"حقوق النشر","tr":"Telif Hakkı"},"t190":{"en":"All Rights Reserved","ar":"جميع الحقوق محفوظة","tr":"Tüm Hakları Saklıdır"},"t191":{"en":"WhatsApp","ar":"واتساب","tr":"WhatsApp"}};
   const typedByLang = {
-    en:['Senior Software Engineer','Python Engineer','Backend Architect','Data Engineer','Distributed Systems Specialist'],
-    ar:['مهندس برمجيات أول','مهندس Python','مهندس أنظمة خلفية','مهندس بيانات','متخصص أنظمة موزعة'],
-    tr:['Kıdemli Yazılım Mühendisi','Python Mühendisi','Backend Mimarı','Veri Mühendisi','Dağıtık Sistemler Uzmanı']
+    en: [
+      'Senior Software Engineer',
+      'Python Engineer',
+      'Backend Architect',
+      'Data Engineer',
+      'Distributed Systems Specialist'
+    ],
+
+    ar: [
+      'مهندس برمجيات أول',
+      'مهندس Python',
+      'مهندس أنظمة خلفية',
+      'مهندس بيانات',
+      'متخصص أنظمة موزعة'
+    ],
+
+    tr: [
+      'Kıdemli Yazılım Mühendisi',
+      'Python Mühendisi',
+      'Backend Mimarı',
+      'Veri Mühendisi',
+      'Dağıtık Sistemler Uzmanı'
+    ]
   };
+
+
+  /*
+   * Save the original English value of every translatable node.
+   * This makes switching back to English reliable.
+   */
+  function cacheEnglishContent() {
+    document.querySelectorAll('[data-i18n-id]').forEach((element) => {
+      if (!element.dataset.i18nEn) {
+        element.dataset.i18nEn = element.textContent.trim();
+      }
+    });
+  }
+
+
+  function translateElement(element, lang) {
+    const english = element.dataset.i18nEn || element.textContent.trim();
+
+    if (lang === 'en') {
+      element.textContent = english;
+      return;
+    }
+
+    const translated = translations[lang]?.[english];
+
+    // Keep English as fallback when no translation exists.
+    element.textContent = translated || english;
+  }
+
 
   function closeMobileNavigation() {
-    if (typeof window.closeMobileNav === 'function') window.closeMobileNav();
-    else {
-      document.body.classList.remove('mobile-nav-open');
-      document.getElementById('header')?.classList.remove('header-show');
+    if (typeof window.closeMobileNav === 'function') {
+      window.closeMobileNav();
+      return;
+    }
+
+    document.body.classList.remove('mobile-nav-open');
+
+    const header = document.getElementById('header');
+
+    if (header) {
+      header.classList.remove('header-show');
     }
   }
 
-  function setLanguage(lang) {
-    if (!['en','ar','tr'].includes(lang)) lang='en';
-    document.querySelectorAll('[data-i18n-id]').forEach((element) => {
-      const item=catalog[element.dataset.i18nId];
-      if (item) element.textContent=item[lang] || item.en;
-    });
-    const html=document.documentElement;
-    html.lang=lang;
-    html.dir=lang==='ar'?'rtl':'ltr';
-    document.body.classList.toggle('rtl',lang==='ar');
-    document.body.classList.toggle('lang-tr',lang==='tr');
-    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-    const typed=document.querySelector('.typed');
-    if (typed) typed.setAttribute('data-typed-items',typedByLang[lang].join(','));
-    document.title = lang==='ar' ? 'پوریا بهزادپور | مهندس برمجيات أول' : lang==='tr' ? 'Purya Behzadpur | Kıdemli Yazılım Mühendisi' : 'Purya Behzadpur | Senior Software Engineer';
-    localStorage.setItem('portfolio-language',lang);
-    closeMobileNavigation();
-    window.dispatchEvent(new CustomEvent('portfolio:language',{detail:{lang,typedItems:typedByLang[lang]}}));
+
+  function updateTypedText(lang) {
+    const typedElement = document.querySelector('.typed');
+
+    if (!typedElement) {
+      return;
+    }
+
+    const items = typedByLang[lang] || typedByLang.en;
+
+    typedElement.setAttribute(
+      'data-typed-items',
+      items.join(',')
+    );
+
+    /*
+     * main.js can listen for this event and rebuild Typed.js
+     * after the language changes.
+     */
+    window.dispatchEvent(
+      new CustomEvent('portfolio:language', {
+        detail: {
+          lang,
+          typedItems: items
+        }
+      })
+    );
   }
 
-  document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',(event)=>{
-    event.preventDefault();
-    setLanguage(btn.dataset.lang);
-  }));
-  window.setPortfolioLanguage=setLanguage;
-  setLanguage(localStorage.getItem('portfolio-language') || 'en');
+
+  function updateDocumentDirection(lang) {
+    const html = document.documentElement;
+
+    html.lang = lang;
+    html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.body.classList.toggle(
+      'rtl',
+      lang === 'ar'
+    );
+
+    document.body.classList.toggle(
+      'lang-tr',
+      lang === 'tr'
+    );
+  }
+
+
+  function updateButtons(lang) {
+    document
+      .querySelectorAll('.lang-btn')
+      .forEach((button) => {
+        button.classList.toggle(
+          'active',
+          button.dataset.lang === lang
+        );
+      });
+  }
+
+
+  function updatePageTitle(lang) {
+    if (lang === 'ar') {
+      document.title =
+        'Purya Behzadpur | مهندس برمجيات أول';
+
+      return;
+    }
+
+    if (lang === 'tr') {
+      document.title =
+        'Purya Behzadpur | Kıdemli Yazılım Mühendisi';
+
+      return;
+    }
+
+    document.title =
+      'Purya Behzadpur | Senior Software Engineer';
+  }
+
+
+  function setLanguage(lang) {
+    if (!['en', 'ar', 'tr'].includes(lang)) {
+      lang = 'en';
+    }
+
+    cacheEnglishContent();
+
+    document
+      .querySelectorAll('[data-i18n-id]')
+      .forEach((element) => {
+        translateElement(element, lang);
+      });
+
+    updateDocumentDirection(lang);
+    updateButtons(lang);
+    updateTypedText(lang);
+    updatePageTitle(lang);
+
+    localStorage.setItem(
+      'portfolio-language',
+      lang
+    );
+
+    closeMobileNavigation();
+  }
+
+
+  document
+    .querySelectorAll('.lang-btn')
+    .forEach((button) => {
+      button.addEventListener(
+        'click',
+        (event) => {
+          event.preventDefault();
+
+          setLanguage(
+            button.dataset.lang
+          );
+        }
+      );
+    });
+
+
+  window.setPortfolioLanguage = setLanguage;
+
+
+  /*
+   * Run after DOM is ready.
+   */
+  cacheEnglishContent();
+
+  setLanguage(
+    localStorage.getItem('portfolio-language') || 'en'
+  );
+
 })();

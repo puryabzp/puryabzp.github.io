@@ -19,10 +19,17 @@
 <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 <link href="assets/css/main.css?v=20260720-final16" rel="stylesheet"/>
+<style>
+.company-meta { display:flex; align-items:center; gap:10px; margin:8px 0 12px; }
+.company-logo { width:38px; height:38px; object-fit:contain; border-radius:8px; background:#fff; border:1px solid rgba(0,0,0,.08); padding:4px; box-shadow:0 2px 8px rgba(0,0,0,.06); flex:0 0 38px; }
+.company-logo--round { border-radius:50%; }
+.company-fallback { width:38px; height:38px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; letter-spacing:.3px; background:#f3f4f6; border:1px solid rgba(0,0,0,.08); color:#444; flex:0 0 38px; }
+.company-meta p { margin:0; }
+.resume-item h4 { margin-bottom:4px; }
+</style>
 </head>
 <body class="index-page">
 <i class="header-toggle d-xl-none bi bi-list"></i><header class="header dark-background d-flex flex-column" id="header">
-
 <div class="profile-img">
 <img alt="Purya Behzadpur" class="img-fluid rounded-circle" src="assets/img/backgroundpic.png"/>
 </div>
@@ -69,7 +76,7 @@
 <section class="about section" id="about">
 <div class="container section-title" data-aos="fade-up">
 <h2><span data-i18n-id="t13">About</span></h2>
-<p><span data-i18n-id="t14">Data-driven software engineer with deep expertise in scalable microservices, distributed system design, backend architecture, and high-throughput data platforms.</span></p>
+<p data-i18n-id="t14">I build backend and data systems that stay fast, observable, and dependable as traffic, data volume, and operational complexity grow.</p>
 </div>
 <div class="container" data-aos="fade-up" data-aos-delay="100">
 <div class="row gy-4 justify-content-center">
@@ -77,25 +84,25 @@
 <img alt="Purya Behzadpur professional portrait" class="img-fluid about-profile" src="assets/img/aboutphoto.jpg"/>
 </div>
 <div class="col-lg-8 content">
-<h2><span data-i18n-id="t15">Senior Software Engineer &amp; Data Systems Specialist</span></h2>
-<p class="fst-italic py-3"><span data-i18n-id="t16">I design reliable APIs, event-driven services, backend architecture, ETL pipelines, and real-time data systems with a strong focus on performance, maintainability, and data quality.</span></p>
+<h2 data-i18n-id="t15">Backend, Data &amp; Distributed Systems</h2>
+<p class="fst-italic py-3" data-i18n-id="t16">8+ years turning complex production requirements into Python services, real-time pipelines, and scalable platforms.</p>
 <div class="row">
 <div class="col-lg-6">
 <ul>
-<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t17">Location:</span></strong> <span><span data-i18n-id="t18">Tehran, Iran</span></span></li>
+<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t17">Location:</span></strong> <span data-i18n-id="t18">Tehran, Iran</span></li>
 <li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t19">Phone:</span></strong> <a class="whatsapp-inline" href="https://wa.me/989368115384" rel="noopener noreferrer" target="_blank">+98 936 811 5384</a></li>
 <li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t20">GitHub:</span></strong> <span>github.com/puryabzp</span></li>
 </ul>
 </div>
 <div class="col-lg-6">
 <ul>
-<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t21">Degree:</span></strong> <span><span data-i18n-id="t22">B.S. in ICT</span></span></li>
+<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t21">Degree:</span></strong> <span data-i18n-id="t22">B.S. Information and Communications Technology</span></li>
 <li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t23">Email:</span></strong> <span>puryabzp@gmail.com</span></li>
-<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t24">Experience:</span></strong> <span><span data-i18n-id="t25">8+ years</span></span></li>
+<li><i class="bi bi-chevron-right"></i> <strong><span data-i18n-id="t24">Experience:</span></strong> <span data-i18n-id="t25">8+ years</span></li>
 </ul>
 </div>
 </div>
-<p class="py-3"><span data-i18n-id="t26">My work spans financial technologies, data engineering, security platforms, and intelligent systems. I enjoy translating complex business and data requirements into clean, scalable software and collaborating with teams to raise engineering standards. Alongside software engineering, I have also worked independently in digital marketing and media, combining technology, content, audience insight, and commercial thinking to help brands strengthen their online presence.</span></p>
+<p class="py-3" data-i18n-id="t26">My work has crossed fintech, cybersecurity, real estate, and intelligent transportation—from platforms serving 1M+ users to distributed security agents, streaming data systems, and nationwide camera infrastructure. I’m most at home where reliability, performance, and clean architecture have to work together in production.</p>
 </div>
 </div>
 </div>
@@ -156,8 +163,7 @@
 <i class="bi bi-bank"></i>
 <span class="stats-number">
 <span data-i18n-id="t37">Top 3</span>
-</div>
-</span>
+</span></div>
 <p>
 <strong><span data-i18n-id="t38">Major Financial Portfolio Platform</span></strong><br/>
 <span>
@@ -172,19 +178,19 @@
 <section class="skills section light-background" id="skills">
 <div class="container section-title" data-aos="fade-up">
 <h2><span data-i18n-id="t40">Skills</span></h2>
-<p><span data-i18n-id="t41">Core technologies and engineering practices used across backend, data, cloud, and distributed systems projects.</span></p>
+<p data-i18n-id="t41">Skills from my current resume.</p>
 </div>
 <div class="container" data-aos="fade-up" data-aos-delay="100">
 <div class="row gy-4">
 <div class="col-lg-6">
-<div class="skill-group"><h4><span data-i18n-id="t42">Backend Engineering</span></h4><p>Python, Java, FastAPI, Django, Flask, GraphQL, SQLAlchemy, REST APIs, OOP, SOLID, DDD</p></div>
-<div class="skill-group"><h4><span data-i18n-id="t43">Data Engineering</span></h4><p>Airflow, ETL, Pandas, PySpark, Data Modeling, Machine Learning, Change Data Capture</p></div>
-<div class="skill-group"><h4><span data-i18n-id="t44">Databases &amp; Search</span></h4><p>PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch</p></div>
+<div class="skill-group"><h4 data-i18n-id="t42">Backend &amp; Architecture</h4><p>Python | FastAPI | Django | REST APIs | GraphQL | Microservices | Distributed Systems | DDD | Celery</p></div>
+<div class="skill-group"><h4 data-i18n-id="t43">Data Engineering</h4><p>Data Engineering | Data Pipelines | ETL/ELT | Apache Airflow | Apache Kafka | Data Modeling | Data Warehousing | dbt</p></div>
+<div class="skill-group"><h4 data-i18n-id="t44">Databases</h4><p>SQL | PostgreSQL | MySQL | Redis | ClickHouse | MongoDB | Elasticsearch | Snowflake | BigQuery</p></div>
 </div>
 <div class="col-lg-6">
-<div class="skill-group"><h4><span data-i18n-id="t45">Messaging &amp; Distributed Systems</span></h4><p>Kafka, RabbitMQ, Celery, Microservices, Event-driven Architecture, API Gateways</p></div>
-<div class="skill-group"><h4><span data-i18n-id="t46">Cloud &amp; DevOps</span></h4><p>Docker, Kubernetes, Terraform, Linux, CI/CD, AWS, Azure, GCP, Nginx</p></div>
-<div class="skill-group"><h4><span data-i18n-id="t47">Quality &amp; Observability</span></h4><p>Pytest, Unit Testing, Integration Testing, TDD, BDD, Grafana, Sentry, Logstash, ElastAlert</p></div>
+<div class="skill-group"><h4 data-i18n-id="t45">Cloud, DevOps &amp; Platform</h4><p>AWS | Azure | GCP | Docker | Kubernetes | Terraform | CI/CD | Git | Bash | Linux | Monitoring | Grafana | Observability</p></div>
+<div class="skill-group"><h4 data-i18n-id="t46">AI &amp; ML</h4><p>Machine Learning | ML Pipelines | MLOps | LLM Applications | AI Agents</p></div>
+<div class="skill-group"><h4 data-i18n-id="t47">Testing &amp; Delivery</h4><p>TDD | BDD | Unit Testing | Integration Testing | Agile | Scrum</p></div>
 </div>
 </div>
 </div>
@@ -192,15 +198,15 @@
 <section class="resume section" id="resume">
 <div class="container section-title" data-aos="fade-up">
 <h2><span data-i18n-id="t48">Resume</span></h2>
-<p><span data-i18n-id="t49">Professional experience building scalable software, data, and distributed systems across finance, cybersecurity, industrial technologies and enterprise platforms.</span></p>
+<p data-i18n-id="t49">A career shaped around building, scaling, and improving production systems where performance and reliability are measurable.</p>
 </div>
 <div class="container">
 <div class="row">
 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-<h3 class="resume-title"><span data-i18n-id="t50">Summary</span></h3>
+<h3 class="resume-title"><span data-i18n-id="t50">Engineering Profile</span></h3>
 <div class="resume-item pb-0">
 <h4>Purya Behzadpur</h4>
-<p><em><span data-i18n-id="t51">Senior Software Engineer focused on scalable backend services, real-time data platforms, and collaborative engineering.</span></em></p>
+<p data-i18n-id="t51">Python-focused software engineer working across backend architecture, data engineering, and distributed systems. Experienced with real-time services, event-driven workflows, analytical data platforms, and performance-sensitive production workloads.</p>
 <ul><li><span data-i18n-id="t52">Tehran, Iran</span></li><li>+98 936 811 5384</li><li>puryabzp@gmail.com</li></ul>
 </div>
 <h3 class="resume-title"><span data-i18n-id="t53">Education</span></h3>
@@ -213,60 +219,33 @@
 <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 <h3 class="resume-title"><span data-i18n-id="t56">Professional Experience</span></h3>
 <div class="resume-item current-role">
-<h4><span data-i18n-id="t57">Senior Software Engineer</span></h4>
-<h5><span data-i18n-id="t58">Nov 2025 - Present</span></h5>
-<p><em><span data-i18n-id="t59">Karnameh, Tehran</span></em></p>
+<h4 data-i18n-id="t57">Senior Software Engineer</h4>
+<h5 data-i18n-id="t58">11/2025 – Present</h5>
+<div class="company-meta"><img alt="Karnameh logo" class="company-logo" src="assets/img/karnameh_logo.png"/><p data-i18n-id="t59">Karnameh | Tehran, Iran</p></div>
 </div>
 <div class="resume-item">
-<h4><span data-i18n-id="t60">Senior Python Engineer, Data Systems</span></h4>
-<h5><span data-i18n-id="t61">May 2023 - Oct 2025</span></h5>
-<p><em><span data-i18n-id="t62">Charisma Financial Group, Tehran</span></em></p>
-<ul>
-<li><span data-i18n-id="t63">Designed and delivered a portfolio management platform combining backend engineering, data engineering, and machine learning.</span></li>
-<li><span data-i18n-id="t64">Built scalable Airflow ETL pipelines powering organization-wide data workflows and analytics.</span></li>
-<li><span data-i18n-id="t65">Developed FastAPI and Plotly Dash applications for monitoring investment predictions and model performance.</span></li>
-<li><span data-i18n-id="t66">Improved legacy PostgreSQL performance by 80% through partitioning and query optimization.</span></li>
-<li><span data-i18n-id="t67">Scaled real-time processing for more than one million customer profiles.</span></li>
-<li><span data-i18n-id="t68">Implemented PostgreSQL-to-Kafka CDC pipelines and managed data processing for 1,400+ Tehran Stock Exchange tickers.</span></li>
-<li><span data-i18n-id="t69">Performed regular code reviews and established maintainable engineering standards across the team.</span></li>
-</ul>
+<h4 data-i18n-id="t60">Senior Python Engineer, Data Systems</h4>
+<h5 data-i18n-id="t61">05/2023 – 10/2025</h5>
+<div class="company-meta"><img alt="Charisma Financial Group logo" class="company-logo" src="assets/img/charisma_logo.jpg"/><p data-i18n-id="t62">Charisma Financial Group | Tehran, Iran</p></div>
+<ul><li data-i18n-id="t63">Built a real-time portfolio management platform integrating backend services, data pipelines, and ML workflows, supporting 1M+ users, 8+ teams, and 10+ consuming services, with backend workloads across 5 Kubernetes pods and CI/CD via Azure DevOps.</li><li data-i18n-id="t64">Built 20+ reusable dbt staging, intermediate, and mart models with incremental materializations and automated data-quality tests, standardizing analytics datasets consumed across 8+ teams and 10+ downstream services.</li><li data-i18n-id="t65">Delivered 7+ Python/Airflow ETL pipelines to continuously refresh data across GraphQL APIs, MongoDB, Redis, relational databases, and Snowflake/BigQuery data warehouses for multiple teams and services.</li><li data-i18n-id="t66">Designed FastAPI and Plotly Dash apps to monitor 5+ investment models generating 1,000+ predictions per market session.</li><li data-i18n-id="t67">Enabled 40+ services via WSO2 API Gateway, delivered 7+ real-time Kafka pipelines, and continuously refreshed Snowflake and shared databases used across multiple teams.</li><li data-i18n-id="t68">Refactored large-scale databases and optimized data models using partitioning and indexing, improving query performance by 80%.</li><li data-i18n-id="t69">Established real-time PostgreSQL-to-Kafka CDC pipelines, enabling real-time synchronization and event-driven processing.</li><li data-i18n-id="t70">Operationalized data-processing workflows for 1,400+ Tehran Stock Exchange instruments, supporting analytics and data teams.</li></ul>
 </div>
 <div class="resume-item">
-<h4><span data-i18n-id="t70">Back-end Developer</span></h4>
-<h5><span data-i18n-id="t71">Feb 2022 - May 2023</span></h5>
-<p><em><span data-i18n-id="t72">Bithome, Tehran</span></em></p>
-<ul>
-<li><span data-i18n-id="t73">Contributed to a new backend architecture as part of a 5-member Agile engineering team.</span></li>
-<li><span data-i18n-id="t74">Improved API responsiveness by 63% using Celery and Redis asynchronous background processing.</span></li>
-<li><span data-i18n-id="t75">Rebuilt the back-office platform with Django, reducing customer response time by 50%.</span></li>
-<li><span data-i18n-id="t76">Expanded automated testing, reducing customer complaints by 23% while improving product quality.</span></li>
-<li><span data-i18n-id="t77">Built Sentry monitoring dashboards for faster issue detection and debugging.</span></li>
-<li><span data-i18n-id="t78">Optimized database queries, increasing overall application performance by 25%.</span></li>
-</ul>
+<h4 data-i18n-id="t71">Backend Engineer</h4>
+<h5 data-i18n-id="t72">02/2022 – 05/2023</h5>
+<div class="company-meta"><img alt="Bithome logo" class="company-logo" src="assets/img/bithome_logo.png"/><p data-i18n-id="t73">Bithome | Tehran, Iran</p></div>
+<ul><li data-i18n-id="t74">Helped a 5-person Agile team successfully launch a real-estate crowdfunding platform, attracting investment for 5+ development projects.</li><li data-i18n-id="t75">Improved endpoint performance by 60% by moving long-running tasks to asynchronous processing with Celery and Redis.</li><li data-i18n-id="t76">Led a full Django back-office rebuild, including frontend delivery, improving workflows and cutting response times by 50%.</li><li data-i18n-id="t77">Raised automated test coverage to 90% in GitLab CI/CD, increasing service reliability and reducing customer complaints by 20–50%.</li><li data-i18n-id="t78">Optimized database queries and added profiling and monitoring, improving application performance by 25%.</li></ul>
 </div>
 <div class="resume-item">
-<h4><span data-i18n-id="t79">Back-end Developer</span></h4>
-<h5><span data-i18n-id="t80">Jun 2020 - Feb 2022</span></h5>
-<p><em><span data-i18n-id="t81">Andisheh Negar Pars, Tehran</span></em></p>
-<ul>
-<li><span data-i18n-id="t82">Developed core components of a SIEM platform managing over 1,000 enterprise clients.</span></li>
-<li><span data-i18n-id="t83">Implemented secure WebSocket communication using AES-128 encryption.</span></li>
-<li><span data-i18n-id="t84">Introduced Celery, Redis, Docker, and Nginx for scalable asynchronous processing and deployment.</span></li>
-<li><span data-i18n-id="t85">Participated in designing and implementing a microservices architecture, improving engineering efficiency by 40%.</span></li>
-<li><span data-i18n-id="t86">Dockerized projects and documented deployment processes to streamline onboarding.</span></li>
-<li><span data-i18n-id="t87">Integrated Elasticsearch, Logstash, and ElastAlert for centralized log analysis and real-time alerting.</span></li>
-</ul>
+<h4 data-i18n-id="t79">Backend Engineer</h4>
+<h5 data-i18n-id="t80">06/2020 – 02/2022</h5>
+<div class="company-meta"><img alt="Andisheh Negar Pars logo" class="company-logo" src="assets/img/andisheh_negar_pars_logo.jpg"/><p data-i18n-id="t81">Andisheh Negar Pars | Tehran, Iran</p></div>
+<ul><li data-i18n-id="t82">Implemented a distributed SIEM agent managing 1,000+ nodes with real-time health monitoring, remote command execution, and automated updates over AES-128-encrypted WebSockets using Celery and Redis.</li><li data-i18n-id="t83">Co-designed and developed 25+ security microservices, led Dockerization, and set up GCP communication, improving efficiency by 40%.</li><li data-i18n-id="t84">Integrated Elasticsearch, Logstash, and ElastAlert into real-time pipelines handling 1,000+ logs/sec for monitoring and anomaly detection.</li></ul>
 </div>
 <div class="resume-item">
-<h4><span data-i18n-id="t88">Software Developer</span></h4>
-<h5><span data-i18n-id="t89">Nov 2017 - Jun 2020</span></h5>
-<p><em><span data-i18n-id="t90">PFK, Tehran</span></em></p>
-<ul>
-<li><span data-i18n-id="t91">Developed and maintained Java-based firmware for intelligent transportation cameras.</span></li>
-<li><span data-i18n-id="t92">Built Python software supporting real-time camera operations across 28 cities.</span></li>
-<li><span data-i18n-id="t93">Optimized MySQL databases to improve processing performance and system reliability.</span></li>
-<li><span data-i18n-id="t94">Managed ITS/ETC databases and server infrastructure across multiple data centers.</span></li>
-</ul>
+<h4 data-i18n-id="t85">Software Developer</h4>
+<h5 data-i18n-id="t86">11/2017 – 06/2020</h5>
+<div class="company-meta"><img alt="PFK logo" class="company-logo" src="assets/img/pfk_logo.png"/><p data-i18n-id="t87">PFK | Tehran, Iran</p></div>
+<ul><li data-i18n-id="t88">Developed and maintained Java-based firmware for 1,200+ traffic-monitoring cameras deployed across 28+ cities.</li><li data-i18n-id="t89">Architected a Python-based distributed system processing 100+ images/sec across the nationwide camera network.</li><li data-i18n-id="t90">Maintained ITS/ETC databases and infrastructure across 4 data centers, supporting reliable distributed traffic operations.</li></ul>
 </div>
 </div>
 </div>
@@ -275,64 +254,50 @@
 <section class="portfolio section light-background" id="highlights">
 <div class="container section-title" data-aos="fade-up">
 <h2><span data-i18n-id="t95">Key Achievements</span></h2>
-<p>
-<span data-i18n-id="t96">Selected engineering contributions across finance, cybersecurity, enterprise software, industrial systems, and large-scale distributed platforms.</span>
-</p>
+<p data-i18n-id="t96">Selected work where scale, throughput, and measurable impact were impossible to hide.</p>
 </div>
 <div class="container">
 <div class="row gy-4">
 <div class="col-lg-4 col-md-6" data-aos="fade-up">
 <div class="achievement-card">
-<i class="bi bi-hdd-network"></i>
-<h4><span data-i18n-id="t97">Scalable Distributed Systems</span></h4>
-<p>
-<span data-i18n-id="t98">Designed and delivered scalable backend architectures capable of supporting high-volume production workloads and mission-critical business services.</span>
-</p>
+<i class="bi bi-people-fill"></i>
+<h4 data-i18n-id="t97">Built for Seven-Figure Scale</h4>
+<p data-i18n-id="t98">Helped shape a real-time portfolio platform serving 1M+ users while supporting 8+ teams and 10+ downstream services.</p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 <div class="achievement-card">
 <i class="bi bi-speedometer2"></i>
-<h4><span data-i18n-id="t99">Performance Engineering</span></h4>
-<p>
-<span data-i18n-id="t100">Optimized databases, APIs, caching layers, asynchronous processing, and distributed services to improve overall system performance.</span>
-</p>
+<h4 data-i18n-id="t99">Made Heavy Queries 80% Faster</h4>
+<p data-i18n-id="t100">Reworked large-scale data models with partitioning and indexing, cutting query time dramatically without changing the product experience.</p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 <div class="achievement-card">
 <i class="bi bi-shield-check"></i>
-<h4><span data-i18n-id="t101">Production Reliability</span></h4>
-<p>
-<span data-i18n-id="t102">Solved complex production incidents and improved system resilience, availability, monitoring, and operational stability.</span>
-</p>
+<h4 data-i18n-id="t101">One Control Plane, 1,000+ Nodes</h4>
+<p data-i18n-id="t102">Built a distributed security agent with real-time health checks, remote execution, automated updates, and encrypted WebSocket communication.</p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6" data-aos="fade-up">
 <div class="achievement-card">
-<i class="bi bi-bank"></i>
-<h4><span data-i18n-id="t103">Enterprise Financial Platforms</span></h4>
-<p>
-<span data-i18n-id="t104">Delivered software solutions for large financial organizations, supporting critical business operations and portfolio management.</span>
-</p>
+<i class="bi bi-activity"></i>
+<h4 data-i18n-id="t103">Streaming 1,000+ Security Events/sec</h4>
+<p data-i18n-id="t104">Connected Elasticsearch, Logstash, and ElastAlert into a real-time monitoring pipeline built for continuous anomaly detection.</p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 <div class="achievement-card">
-<i class="bi bi-people"></i>
-<h4><span data-i18n-id="t105">Technical Leadership</span></h4>
-<p>
-<span data-i18n-id="t106">Mentored engineers, collaborated with cross-functional teams, and contributed to software architecture and engineering best practices.</span>
-</p>
+<i class="bi bi-camera-video"></i>
+<h4 data-i18n-id="t105">Nationwide Vision Infrastructure</h4>
+<p data-i18n-id="t106">Worked on 1,200+ traffic cameras across 28+ cities and architected a Python distributed system processing 100+ images every second.</p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 <div class="achievement-card">
-<i class="bi bi-graph-up-arrow"></i>
-<h4><span data-i18n-id="t107">Business Impact</span></h4>
-<p>
-<span data-i18n-id="t108">Built reliable software products that improved customer experience, accelerated delivery, and supported business growth at scale.</span>
-</p>
+<i class="bi bi-database-gear"></i>
+<h4 data-i18n-id="t107">Built the Data Backbone</h4>
+<p data-i18n-id="t108">Delivered reusable dbt models, Airflow ETL, Kafka streams, and CDC workflows that became shared building blocks for analytics and production services.</p>
 </div>
 </div>
 </div>
@@ -340,16 +305,16 @@
 </section>
 <section class="services section" id="services">
 <div class="container section-title" data-aos="fade-up">
-<h2><span data-i18n-id="t109">Areas of Expertise</span></h2>
-<p><span data-i18n-id="t110">Engineering capabilities for teams building dependable, scalable, and data-intensive products.</span></p>
+<h2 data-i18n-id="t109">Areas of Expertise</h2>
+<p data-i18n-id="t110">Where backend architecture, data platforms, distributed systems, and production reliability come together.</p>
 </div>
 <div class="container"><div class="row gy-4">
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up"><div class="icon flex-shrink-0"><i class="bi bi-code-square"></i></div><div><h4 class="title"><span data-i18n-id="t111">Backend Architecture</span></h4><p class="description"><span data-i18n-id="t112">Scalable APIs and services using Python, FastAPI, Django, Flask, and event-driven patterns.</span></p></div></div>
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100"><div class="icon flex-shrink-0"><i class="bi bi-database-gear"></i></div><div><h4 class="title"><span data-i18n-id="t113">Data Engineering</span></h4><p class="description"><span data-i18n-id="t114">ETL, CDC, data modeling, Airflow orchestration, and reliable batch and real-time pipelines.</span></p></div></div>
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200"><div class="icon flex-shrink-0"><i class="bi bi-diagram-3-fill"></i></div><div><h4 class="title"><span data-i18n-id="t115">Distributed Systems</span></h4><p class="description"><span data-i18n-id="t116">Kafka, RabbitMQ, Redis, Celery, microservices, and fault-aware system design.</span></p></div></div>
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up"><div class="icon flex-shrink-0"><i class="bi bi-cloud-check"></i></div><div><h4 class="title"><span data-i18n-id="t117">Cloud &amp; DevOps</span></h4><p class="description"><span data-i18n-id="t118">Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, GCP, and Nginx.</span></p></div></div>
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100"><div class="icon flex-shrink-0"><i class="bi bi-activity"></i></div><div><h4 class="title"><span data-i18n-id="t119">Performance &amp; Reliability</span></h4><p class="description"><span data-i18n-id="t120">Database tuning, profiling, automated tests, observability, Sentry, Grafana, and logging.</span></p></div></div>
-<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200"><div class="icon flex-shrink-0"><i class="bi bi-people-fill"></i></div><div><h4 class="title"><span data-i18n-id="t121">Engineering Collaboration</span></h4><p class="description"><span data-i18n-id="t122">Code reviews, standards, documentation, Agile delivery, and maintainable software design.</span></p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up"><div class="icon flex-shrink-0"><i class="bi bi-code-square"></i></div><div><h4 class="title" data-i18n-id="t111">Backend Architecture</h4><p class="description" data-i18n-id="t112">Python, FastAPI, Django, REST and GraphQL APIs, DDD, microservices, and production-grade service design.</p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100"><div class="icon flex-shrink-0"><i class="bi bi-database-gear"></i></div><div><h4 class="title" data-i18n-id="t113">Data Platforms &amp; Pipelines</h4><p class="description" data-i18n-id="t114">Airflow, dbt, ETL/ELT, CDC, data modeling, warehousing, and high-volume ingestion across operational and analytical systems.</p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200"><div class="icon flex-shrink-0"><i class="bi bi-diagram-3-fill"></i></div><div><h4 class="title" data-i18n-id="t115">Real-Time &amp; Distributed Systems</h4><p class="description" data-i18n-id="t116">Kafka, Redis, Celery, event-driven architecture, distributed processing, and scalable systems built for real-time workloads.</p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up"><div class="icon flex-shrink-0"><i class="bi bi-speedometer2"></i></div><div><h4 class="title" data-i18n-id="t117">Performance &amp; Reliability</h4><p class="description" data-i18n-id="t118">Query optimization, partitioning, indexing, observability, monitoring, automated testing, and production resilience under load.</p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100"><div class="icon flex-shrink-0"><i class="bi bi-cloud-check"></i></div><div><h4 class="title" data-i18n-id="t119">Cloud &amp; Platform Engineering</h4><p class="description" data-i18n-id="t120">Docker, Kubernetes, Terraform, CI/CD, Linux, AWS, Azure, and GCP for dependable deployment and platform automation.</p></div></div>
+<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200"><div class="icon flex-shrink-0"><i class="bi bi-stars"></i></div><div><h4 class="title" data-i18n-id="t121">AI &amp; Intelligent Systems</h4><p class="description" data-i18n-id="t122">ML pipelines, MLOps, LLM applications, AI agents, and integrating intelligent workflows into production software.</p></div></div>
 </div></div>
 </section>
 <!-- FREELANCE SECTION DISABLED
@@ -442,7 +407,7 @@ END FREELANCE SECTION -->
 <section class="testimonials section light-background" id="recommendations">
 <div class="container section-title" data-aos="fade-up">
 <h2><span data-i18n-id="t150">Recommendations</span></h2>
-<p><span data-i18n-id="t151">Feedback from engineering leaders, managers, mentors, and teammates who have worked with me directly.</span></p>
+<p><span data-i18n-id="t151">Feedback from engineering leaders, managers and teammates who have worked with me directly.</span></p>
 </div>
 <div class="container" data-aos="fade-up" data-aos-delay="100">
 <div class="swiper init-swiper">
@@ -592,6 +557,6 @@ END FREELANCE SECTION -->
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/js/i18n.js?v=20260720-final14"></script><script src="assets/js/main.js?v=20260720-final14"></script>
+<script src="assets/js/i18n.js?v=20260912-v4"></script><script src="assets/js/main.js?v=20260720-final14"></script>
 </body>
 </html>
