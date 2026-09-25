@@ -554,7 +554,16 @@ END FREELANCE SECTION -->
 <div class="visitor-counter" title="Total portfolio visits">
 <i aria-hidden="true" class="bi bi-eye"></i>
 <span data-i18n-id="t192">Portfolio visits</span>
-<strong aria-live="polite" id="portfolio-visitor-count">...</strong>
+<strong
+  class="counterapi"
+  aria-live="polite"
+  ns="purya-behzadpur-portfolio"
+  action="view"
+  key="homepage"
+  noCss="true"
+  noIcon="true"
+  noLink="true"
+  noAnim="true">0</strong>
 </div>
 </div>
 </div>
@@ -572,17 +581,6 @@ END FREELANCE SECTION -->
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/i18n.js?v=20260925-v5"></script><script src="assets/js/main.js?v=20260720-final14"></script>
-<script>
-function updatePortfolioVisitorCount(response) {
-  var counter = document.getElementById('portfolio-visitor-count');
-  if (!counter) return;
-  if (response && typeof response.value === 'number') {
-    counter.textContent = response.value.toLocaleString();
-  } else {
-    counter.textContent = 'Live';
-  }
-}
-</script>
-<script async="" src="https://counterapi.com/api/purya-behzadpur-portfolio/visit/homepage?callback=updatePortfolioVisitorCount"></script>
+<script async src="https://counterapi.com/c.js?ns=purya-behzadpur-portfolio"></script>
 </body>
 </html>
